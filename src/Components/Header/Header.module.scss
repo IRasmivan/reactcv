@@ -1,0 +1,78 @@
+$main-red: #ee5151;
+$red-gradient: #f5256a;
+$main-black: rgb(14, 14, 14);
+
+$margin: 20px;
+
+header {
+  flex: 0 0 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+%HeaderSplit {
+  position: relative;
+}
+
+%HeaderTitle {
+  margin: $margin;
+
+  font-size: 5rem;
+  color: white;
+}
+
+.HeaderRoundImg {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  img {
+    border-radius: 50%;
+    width: 40%;
+  }
+}
+.HeaderTitleBox {
+  position: absolute;
+  top: 50%;
+  width: 400px;
+  transform: translate(0, -50%);
+  height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  h1 {
+    @extend %HeaderTitle;
+    right: 0;
+  }
+  h3 {
+    display: block;
+    right: 0;
+    margin: $margin;
+  }
+  a {
+    display: block;
+    right: 0;
+    margin: $margin;
+    text-decoration: none;
+    color: white;
+  }
+}
+.Right {
+  @extend %HeaderSplit;
+  background-color: $main-black;
+  flex: 0 0 40vw;
+  .HeaderTitleBox {
+    right: 0;
+  }
+}
+.Left {
+  @extend %HeaderSplit;
+  background-image: linear-gradient($main-red, $red-gradient);
+  flex: 0 0 60vw;
+  .HeaderTitleBox {
+    h1 {
+      align-self: flex-start;
+    }
+  }
+}

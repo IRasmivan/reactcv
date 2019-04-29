@@ -1,0 +1,10 @@
+$background: #4682b4;
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+.Wrapper {
+  background-color: $background;
+  flex: 0 0 100vh;
+}

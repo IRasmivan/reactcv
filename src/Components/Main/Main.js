@@ -15,7 +15,8 @@ class Main extends Component {
       },
       large: {
         flex: "0 0 60%",
-        margin: "20px"
+        margin: "20px",
+        background: "#e4e4e4"
       }
     };
     return (
@@ -34,13 +35,38 @@ class Main extends Component {
             <h1>
               <i class="fa fa-suitcase" /> Skills
             </h1>
-            <p>
-              {
-                "Java, Angular, Microservice, Docker, Kubernetes, SQL, Postgres, jenkins, CI/CD, AWS, Azure, Hands on Python & React.js"
-              }
+            <p STYLE="text-align:left;margin-left: 15px;">
+              <ul>
+                <li>Java</li>
+                <li>Angular</li>
+                <li>Microservice</li>
+                <li>Docker</li>
+                <li>Kubernetes</li>
+                <li>SQL</li>
+                <li>Postgres</li>
+                <li>jenkins</li>
+                <li>CI/CD</li>
+                <li>AWS</li>
+                <li>Azure</li>
+                <li>Hands on Python & React.js</li>
+              </ul>
             </p>
           </ContentDiv>
-          <ContentDiv styles={boxes.large}>{text}</ContentDiv>
+          <ContentDiv styles={boxes.large}>
+            <div STYLE="text-align:justify;margin: 2px;">
+              <p>I have 10+ years of IT expreanse</p>
+              <p>
+                I am a Java microservice, Angular and Devops (Full Stack
+                Developer). Currently i'm learning to use React, Node.js and
+                Express.
+              </p>
+              <p>
+                As part of my daily work I use git in my projects. I recently
+                rediscovered my love for making websites, service building and
+                automating everything
+              </p>
+            </div>
+          </ContentDiv>
         </main>
       </div>
     );

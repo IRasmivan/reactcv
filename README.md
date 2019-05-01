@@ -33,5 +33,5 @@ Clone into EC2 instance
 ```
 docker build . -t reactcv
 docker images
-docker run -p 8000:80 reactcv
+docker run -p 80:80 reactcv
 ```

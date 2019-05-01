@@ -25,3 +25,13 @@ To build an optimized bundle, run
 ```
 npm run build
 ```
+
+### Deploying in AWS EC2
+
+Clone into EC2 instance
+
+```
+docker build . -t reactcv
+docker images
+docker run -p 8000:80 reactcv
+```

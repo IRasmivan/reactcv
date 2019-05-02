@@ -33,7 +33,7 @@ node {
 
        stage('Build Docker'){
             sh 'ls'
-            sh 'cdr=$(pwd);chmod 775 $cdr/dockerBuild.sh'
+            sh 'cdr=$(pwd);chmod 775 $cdr/dockerBuild.sh; $cdr/dockerBuild.sh'
        }
 
        /*stage('Deploy'){

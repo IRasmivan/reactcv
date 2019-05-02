@@ -34,6 +34,7 @@ node {
        stage('Build Docker'){
             sh 'ls'
             sh 'whoami'
+            sh 'sudo usermod -a -G docker $USER'
             sh 'groups'
             sh 'cdr=$(pwd);chmod 775 $cdr/dockerBuild.sh; $cdr/dockerBuild.sh'
        }

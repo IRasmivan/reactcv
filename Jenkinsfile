@@ -26,7 +26,7 @@ node {
 
        stage('Checkout'){
           echo 'ssh to web server and tell it to pull new image'
-          //checkout scm
+          checkout scm
        }
 
        

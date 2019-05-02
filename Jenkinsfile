@@ -31,12 +31,12 @@ node {
 
        
 
-       /*stage('Build Docker'){
+       stage('Build Docker'){
 
             sh './dockerBuild.sh'
        }
 
-       stage('Deploy'){
+       /*stage('Deploy'){
 
          echo 'Push to Repo'
          sh './dockerPushToRepo.sh'

@@ -32,8 +32,8 @@ node {
        
 
        stage('Build Docker'){
-
-            sh './dockerBuild.sh'
+            sh 'ls'
+            //sh './dockerBuild.sh'
        }
 
        /*stage('Deploy'){

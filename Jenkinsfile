@@ -25,28 +25,22 @@ node {
     try {
 
        stage('Checkout'){
+          deleteDir()
           echo 'ssh to web server and tell it to pull new image'
           checkout scm
        }
-
        
-
        stage('Build Docker'){
-            sh 'ls'
-            sh 'whoami'
-            /*sh 'sudo usermod -a -G docker $USER'*/
-            sh 'groups'
             sh 'cdr=$(pwd);chmod 775 $cdr/dockerBuild.sh; $cdr/dockerBuild.sh'
        }
 
-       /*stage('Deploy'){
+      /* stage('Deploy'){
 
          echo 'Push to Repo'
          sh './dockerPushToRepo.sh'
 
          echo 'ssh to web server and tell it to pull new image'
          sh 'ssh deploy@xxxxx.xxxxx.com running/xxxxxxx/dockerRun.sh'
-
        }
 
        stage('Cleanup'){

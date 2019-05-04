@@ -11,7 +11,7 @@ export default class Introduction extends Component {
         >
           <div className="flexslider js-fullheight">
             <ul className="slides">
-              <li style={{ backgroundImage: "url(images/img_bg.jpg)" }}>
+              <li style={{ backgroundImage: "url(./images/img_bg.jpg)" }}>
                 <div className="overlay" />
                 <div className="container-fluid">
                   <div className="row">

@@ -12,10 +12,9 @@ COPY --from=react-build /app/build /usr/share/nginx/html
 
 
 ## Install Certificate -- Start
-RUN apt-get update && \
-    apt-get -y install sudo
 RUN apk add netcat-openbsd bc curl wget git bash
 RUN apk add libressl
+RUN apk sudo
 RUN git clone https://github.com/Neilpang/acme.sh.git
 RUN acme.sh/acme.sh --install
 RUN ./acme.sh/acme.sh --issue -d rasmivan.com -w /var/www/rasmivan.com

@@ -9,5 +9,5 @@ docker images
 docker run -d -p 80:80 reactcv
 
 ## Deploye into git Hub homepage
-npm install gh-pages
-npm run deploy
+#npm install gh-pages
+#npm run deploy

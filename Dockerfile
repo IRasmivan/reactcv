@@ -18,7 +18,7 @@ VOLUME /usr/share/nginx/html
 # RUN git clone https://github.com/Neilpang/acme.sh.git
 # RUN cd ./acme.sh && \
 #     RUN sudo ./acme.sh --install && \
-#     RUN sudo ./acme.sh --issue -d rasmivan.com -w /var/www/rasmivan.com && \
+#     RUN sudo ./acme.sh --issue -d rasmivan.com -w /usr/share/nginx/html/rasmivan.com && \
 #     RUN sudo ./acme.sh --installcert -d rasmivan.com \
 #     --keypath  /etc/nginx/rasmivan.com.key \
 #     --capath  /etc/nginx/rasmivan.com.ca \

@@ -9,5 +9,22 @@ RUN yarn build
 FROM nginx:alpine
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=react-build /app/build /usr/share/nginx/html
+
+
+## Install Certificate -- Start
+RUN apt-get update && \
+    apt-get -y install sudo
+RUN apk add netcat-openbsd bc curl wget git bash
+RUN apk add libressl
+RUN git clone https://github.com/Neilpang/acme.sh.git
+RUN acme.sh/acme.sh --install
+RUN ./acme.sh/acme.sh --issue -d rasmivan.com -w /var/www/rasmivan.com
+RUN ./acme.sh/acme.sh --installcert -d rasmivan.com \
+    --keypath  /etc/nginx/rasmivan.com.key \
+    --capath  /etc/nginx/rasmivan.com.ca \
+    --fullchainpath  /etc/nginx/rasmivan.com.crt \
+    --reloadcmd  "sudo service nginx reload"
+## Install Certificate -- End
+
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

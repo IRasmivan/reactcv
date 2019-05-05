@@ -123,7 +123,7 @@ export default class About extends Component {
                     <h3>Frameworks/Tools</h3>
                     <p>
                       Built Rest-API using django framework in Python. I am
-                      Using Groovy script to write Jenkins pipline. Have vast
+                      Using Groovy script to write Jenkins pipeline. Have vast
                       knowledge in SQL Service, have tuned perfomance and
                       designed datamodel.
                     </p>
@@ -141,7 +141,7 @@ export default class About extends Component {
                       Running is my passion! I am a marathoner and an ultra
                       marathoner. My longest distance marathon is 100 miles
                       covered in 35 hours and planning to run 200 miles. I am
-                      currently training for trialathon. I've participated in 56
+                      currently training for triathlon. I've participated in 56
                       marathons till date and would like to complete 1000+
                       marathons before i kick the bucket.
                     </p>

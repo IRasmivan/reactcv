@@ -32,8 +32,11 @@ export default class Sidebar extends Component {
                 <i className="icon-mail" />
                 rasmivancse@gmail.com
               </span>
-              <span className="number">
+              <span className="email">
                 <i className="icon-phone" /> +44-745-966-9676
+              </span>
+              <span className="number">
+                <i className="icon-whatsapp" /> +91-848-953-2988
               </span>
             </div>
             <nav id="colorlib-main-menu" role="navigation" className="navbar">
@@ -49,8 +52,16 @@ export default class Sidebar extends Component {
                       About
                     </a>
                   </li>
-                  {/*<li><a href="#" data-nav-section="projects">Projects</a></li>
-                  <li><a href="#" data-nav-section="blog">Blog</a></li>*/}
+                  {/* <li>
+                    <a href="#" data-nav-section="projects">
+                      Projects
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" data-nav-section="blog">
+                      Blog
+                    </a>
+                  </li> */}
                   <li>
                     <a href="#" data-nav-section="timeline">
                       Timeline
@@ -65,17 +76,26 @@ export default class Sidebar extends Component {
                   <a
                     href="https://www.facebook.com/rasmivan.ilangovan"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <i className="icon-facebook2" />
                   </a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/rasmivan" target="_blank">
+                  <a
+                    href="https://twitter.com/rasmivan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <i className="icon-twitter2" />
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/rasmivan/" target="_blank">
+                  <a
+                    href="https://www.instagram.com/rasmivan/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <i className="icon-instagram" />
                   </a>
                 </li>
@@ -83,12 +103,17 @@ export default class Sidebar extends Component {
                   <a
                     href="https://www.linkedin.com/in/rasmivan-ilangovan-a9853b70/"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <i className="icon-linkedin2" />
                   </a>
                 </li>
                 <li>
-                  <a href="https://github.com/IRasmivan" target="_blank">
+                  <a
+                    href="https://github.com/IRasmivan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <i className="icon-github" />
                   </a>
                 </li>
@@ -96,6 +121,7 @@ export default class Sidebar extends Component {
                   <a
                     href="https://medium.com/@dhruv.barochia34788"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <i className="icon-blogger2" />
                   </a>
@@ -108,7 +134,11 @@ export default class Sidebar extends Component {
                   Made with <i className="icon-code" aria-hidden="true" />
                   <br />
                   Thanks{" "}
-                  <a href="https://colorlib.com" target="_blank">
+                  <a
+                    href="https://colorlib.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Colorlib
                   </a>{" "}
                   for inspiration

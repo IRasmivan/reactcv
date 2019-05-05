@@ -27,6 +27,7 @@ export default class Introduction extends Component {
                               className="btn btn-primary btn-learn"
                               href="https://drive.google.com/file/d/1QtOa-M_GLgSHOWkckpWT6WKhDliHkA3_/view"
                               target="_blank"
+                              rel="noopener noreferrer"
                             >
                               View CV
                               <i className="icon-download4" />
@@ -54,6 +55,7 @@ export default class Introduction extends Component {
                               className="btn btn-primary btn-learn"
                               href="https://github.com/IRasmivan"
                               target="_blank"
+                              rel="noopener noreferrer"
                             >
                               View Projects <i className="icon-briefcase3" />
                             </a>
@@ -80,6 +82,7 @@ export default class Introduction extends Component {
                               className="btn btn-primary btn-learn"
                               href="https://medium.com/@dhruv.barochia34788"
                               target="_blank"
+                              rel="noopener noreferrer"
                             >
                               View Blog <i className="icon-book" />
                             </a>

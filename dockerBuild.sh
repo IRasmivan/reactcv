@@ -6,4 +6,4 @@ docker rmi -f $(docker images -f "dangling=true" -q) #remove all dangling image
 
 docker build . -t reactcv
 docker images
-docker run -d -p 80:80 reactcv -v /home/ec2-user/cert/rasmivan.com:/app/build /usr/share/nginx/html
+docker run -d -p 80:80 reactcv

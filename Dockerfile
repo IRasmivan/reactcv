@@ -16,9 +16,10 @@ RUN apk add netcat-openbsd bc curl wget git bash
 RUN apk add libressl
 RUN apk add sudo
 RUN git clone https://github.com/Neilpang/acme.sh.git
-RUN acme.sh/acme.sh --install
-RUN ./acme.sh/acme.sh --issue -d rasmivan.com -w /var/www/rasmivan.com
-RUN ./acme.sh/acme.sh --installcert -d rasmivan.com \
+RUN cd acme.sh
+RUN ./acme.sh --install
+RUN ./acme.sh --issue -d rasmivan.com -w /var/www/rasmivan.com
+RUN ./acme.sh --installcert -d rasmivan.com \
     --keypath  /etc/nginx/rasmivan.com.key \
     --capath  /etc/nginx/rasmivan.com.ca \
     --fullchainpath  /etc/nginx/rasmivan.com.crt \

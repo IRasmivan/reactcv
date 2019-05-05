@@ -7,3 +7,7 @@ docker rmi -f $(docker images -f "dangling=true" -q) #remove all dangling image
 docker build . -t reactcv
 docker images
 docker run -d -p 80:80 reactcv
+
+## Deploye into git Hub homepage
+npm install gh-pages
+npm run deploy

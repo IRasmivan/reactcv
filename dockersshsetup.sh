@@ -1,16 +1,3 @@
-# Stage 1
-FROM node:8 as react-build
-WORKDIR /app
-COPY . ./
-RUN yarn
-RUN yarn build
-
-# Stage 2 - the production environment
-FROM nginx:alpine
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=react-build /app/build /usr/share/nginx/html
-VOLUME /usr/share/nginx/html
-
 ## Install Certificate -- Start
 # RUN apk add netcat-openbsd bc curl wget git bash
 # RUN apk add libressl
@@ -26,5 +13,3 @@ VOLUME /usr/share/nginx/html
 #     --reloadcmd  "sudo service nginx reload"
 ## Install Certificate -- End
 
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]

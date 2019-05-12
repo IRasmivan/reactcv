@@ -56,12 +56,12 @@ export default class Sidebar extends Component {
                     <a href="#" data-nav-section="projects">
                       Projects
                     </a>
-                  </li>
+                  </li>*/}
                   <li>
                     <a href="#" data-nav-section="blog">
                       Blog
                     </a>
-                  </li> */}
+                  </li> 
                   <li>
                     <a href="#" data-nav-section="timeline">
                       Timeline

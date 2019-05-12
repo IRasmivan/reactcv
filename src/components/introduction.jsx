@@ -66,7 +66,7 @@ export default class Introduction extends Component {
                   </div>
                 </div>
               </li>
-              {/* <li style={{ backgroundImage: "url(images/img_bg.jpg)" }}>
+              <li style={{ backgroundImage: "url(images/img_bg.jpg)" }}>
                 <div className="overlay" />
                 <div className="container-fluid">
                   <div className="row">
@@ -74,13 +74,13 @@ export default class Introduction extends Component {
                       <div className="slider-text-inner">
                         <div className="desc">
                           <h1>
-                            I often <br />
+                            I rarely <br />
                             Write ...{" "}
                           </h1>
                           <p>
                             <a
                               className="btn btn-primary btn-learn"
-                              href="https://medium.com/@dhruv.barochia34788"
+                              href="https://irasmivan.github.io/blog/#/"
                               target="_blank"
                               rel="noopener noreferrer"
                             >
@@ -92,7 +92,7 @@ export default class Introduction extends Component {
                     </div>
                   </div>
                 </div>
-              </li> */}
+              </li>
             </ul>
           </div>
         </section>

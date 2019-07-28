@@ -1,7 +1,18 @@
 import React, { Component } from "react";
+import GoogleAd from './google_ad';
 
 export default class About extends Component {
   render() {
+// create a style object that is applied
+// to the div wrapping the adSense code
+// no styling required - just leave style object empty
+const style = {
+  marginTop: '15px',
+  marginBottom: '20px'
+};
+
+    
+
     return (
       <div>
         <section className="colorlib-about" data-section="about">
@@ -31,6 +42,15 @@ export default class About extends Component {
                         own thought through this media, if you have any
                         suggestion you can write me back.{" "}
                       </p>
+                    </div>
+                    <div>
+                      {/* This is Adv */}
+                      <GoogleAd 
+                          client="ca-pub-6886809086601849" 
+                          slot="6033084443" 
+                          format="fluid" 
+                          wrapperDivStyle={style}
+                        />
                     </div>
                   </div>
                 </div>

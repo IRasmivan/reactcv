@@ -28,7 +28,7 @@ const style = {
                       <span className="heading-meta">About Me</span>
                       <h2 className="colorlib-heading">Who Am I?</h2>
                       <p>
-                        I have {this.getYear() - 2009}+ years of IT experience. I am a Java
+                        I have {(new Date().getFullYear()) - 2009}+ years of IT experience. I am a Java
                         microservice developer, Angular & React UI developer, I
                         do build and maintain environment using Git, Jenkins,
                         Docker, K8s. I am a Full Stack Developer in short.

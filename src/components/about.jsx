@@ -28,7 +28,7 @@ const style = {
                       <span className="heading-meta">About Me</span>
                       <h2 className="colorlib-heading">Who Am I?</h2>
                       <p>
-                        I have 10+ years of IT experience. I am a Java
+                        I have {this.getYear() - 2009}+ years of IT experience. I am a Java
                         microservice developer, Angular & React UI developer, I
                         do build and maintain environment using Git, Jenkins,
                         Docker, K8s. I am a Full Stack Developer in short.
@@ -42,15 +42,6 @@ const style = {
                         own thought through this media, if you have any
                         suggestion you can write me back.{" "}
                       </p>
-                    </div>
-                    <div>
-                      {/* This is Adv */}
-                      <GoogleAd 
-                          client="ca-pub-6886809086601849" 
-                          slot="6033084443" 
-                          format="fluid" 
-                          wrapperDivStyle={style}
-                        />
                     </div>
                   </div>
                 </div>

@@ -18,6 +18,24 @@ export default class Timeline extends Component {
             <div className="row">
               <div className="col-md-12">
                 <div className="timeline-centered">
+                <article
+                    className="timeline-entry animate-box"
+                    data-animate-effect="fadeInLeft"
+                  >
+                    <div className="timeline-entry-inner">
+                      <div className="timeline-icon color-7">
+                        <i className="icon-pin-outline" />
+                      </div>
+                      <div className="timeline-label">
+                        <h2>
+                          <a href="#">Work at Intent HQ</a> <span>2021 Sept - present</span>
+                        </h2>
+                        <p>
+                          I have started my career with Intent HQ on September, 2021 London
+                        </p>
+                      </div>
+                    </div>
+                  </article>
                   <article
                     className="timeline-entry animate-box"
                     data-animate-effect="fadeInLeft"
@@ -28,7 +46,7 @@ export default class Timeline extends Component {
                       </div>
                       <div className="timeline-label">
                         <h2>
-                          <a href="#">Work at TCS</a> <span>2008-present</span>
+                          <a href="#">Work at TCS</a> <span>2008 - 2021 Aug</span>
                         </h2>
                         <p>
                           I have started my career with TCS on Dec, 2008. My key

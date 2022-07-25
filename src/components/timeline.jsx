@@ -31,7 +31,7 @@ export default class Timeline extends Component {
                           <a href="#">Work at Intent HQ</a> <span>2021 Sept - present</span>
                         </h2>
                         <p>
-                          I have started my career with Intent HQ on September, 2021 London
+                          Scala Engineer where I build webservice to consume and process Millions of data. I build application using scala, React and deploy them as docker container using nomad as container orchestration and GitHub Action for Continuous Integration.                  
                         </p>
                       </div>
                     </div>

@@ -28,10 +28,10 @@ const style = {
                       <span className="heading-meta">About Me</span>
                       <h2 className="colorlib-heading">Who Am I?</h2>
                       <p>
-                        I have {(new Date().getFullYear()) - 2009}+ years of IT experience. I am a Java
+                        I have {(new Date().getFullYear()) - 2009}+ years of IT experience. I am a Java & Scala
                         microservice developer, Angular & React UI developer, I
                         do build and maintain environment using Git, Jenkins,
-                        Docker, K8s. I am a Full Stack Developer in short.
+                        Docker, K8s, Nomad. I am a Full Stack Developer in short.
                         Currently I'm learning No-SQL DB (Mongo). I love making
                         websites, service building and to automate everything.
                       </p>
@@ -40,7 +40,7 @@ const style = {
                         websites/webpages, eventhough I have developed many
                         websites in my career this is new for me to express my
                         own thought through this media, if you have any
-                        suggestion you can write me back.{" "}
+                        suggestion you can write me back.
                       </p>
                     </div>
                   </div>
@@ -72,7 +72,7 @@ const style = {
                     <h3>Microservice Development </h3>
                     <p>
                       I have massive experience in building microservices using
-                      Java Spring Boot & Spring Batch. I've detailed
+                      Java Spring Boot, Spring Batch. I've detailed
                       understanding of Microservice architecture.
                     </p>
                   </div>

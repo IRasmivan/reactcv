@@ -23,12 +23,30 @@ export default class Timeline extends Component {
                     data-animate-effect="fadeInLeft"
                   >
                     <div className="timeline-entry-inner">
+                      <div className="timeline-icon color-2">
+                        <i className="icon-pin-outline" />
+                      </div>
+                      <div className="timeline-label">
+                        <h2>
+                          <a href="#">Working at ITV</a> <span>2023 June - present</span>
+                        </h2>
+                        <p>
+                          Scala Engineer where I build webservice to consume and process Millions of data. I build application using scala, React and deploy them as docker container using nomad as container orchestration and GitHub Action for Continuous Integration.                  
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                <article
+                    className="timeline-entry animate-box"
+                    data-animate-effect="fadeInLeft"
+                  >
+                    <div className="timeline-entry-inner">
                       <div className="timeline-icon color-7">
                         <i className="icon-pin-outline" />
                       </div>
                       <div className="timeline-label">
                         <h2>
-                          <a href="#">Work at Intent HQ</a> <span>2021 Sept - present</span>
+                          <a href="#">Work at Intent HQ</a> <span>2021 Sept - 2023 June</span>
                         </h2>
                         <p>
                           Scala Engineer where I build webservice to consume and process Millions of data. I build application using scala, React and deploy them as docker container using nomad as container orchestration and GitHub Action for Continuous Integration.                  

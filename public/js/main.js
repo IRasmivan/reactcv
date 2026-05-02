@@ -36,28 +36,6 @@
 
 	};
 
-
-	var counter = function() {
-		$('.js-counter').countTo({
-			 formatter: function (value, options) {
-	      return value.toFixed(options.decimals);
-	    },
-		});
-	};
-
-
-	var counterWayPoint = function() {
-		if ($('#colorlib-counter').length > 0 ) {
-			$('#colorlib-counter').waypoint( function( direction ) {
-										
-				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-					setTimeout( counter , 400);					
-					$(this.element).addClass('animated');
-				}
-			} , { offset: '90%' } );
-		}
-	};
-
 	// Animations
 	var contentWayPoint = function() {
 		var i = 0;
@@ -295,29 +273,9 @@
 
 	};
 
-	var owlCrouselFeatureSlide = function() {
-		$('.owl-carousel').owlCarousel({
-			animateOut: 'fadeOut',
-		   animateIn: 'fadeIn',
-		   autoplay: true,
-		   loop:true,
-		   margin:0,
-		   nav:true,
-		   dots: false,
-		   autoHeight: true,
-		   items: 1,
-		   navText: [
-		      "<i class='icon-arrow-left3 owl-direction'></i>",
-		      "<i class='icon-arrow-right3 owl-direction'></i>"
-	     	]
-		})
-	};
-
 	// Document on load.
 	$(function(){
 		fullHeight();
-		counter();
-		counterWayPoint();
 		contentWayPoint();
 		burgerMenu();
 
@@ -330,7 +288,6 @@
 		mobileMenuOutsideClick();
 		sliderMain();
 		stickyFunction();
-		owlCrouselFeatureSlide();
 	});
 
 

@@ -1,18 +1,7 @@
 import React, { Component } from "react";
-import GoogleAd from './google_ad';
 
 export default class About extends Component {
   render() {
-// create a style object that is applied
-// to the div wrapping the adSense code
-// no styling required - just leave style object empty
-const style = {
-  marginTop: '15px',
-  marginBottom: '20px'
-};
-
-    
-
     return (
       <div>
         <section className="colorlib-about" data-section="about">
@@ -41,6 +30,14 @@ const style = {
                         websites in my career this is new for me to express my
                         own thought through this media, if you have any
                         suggestion you can write me back.
+                      </p>
+                      <p>
+                        I am currently exploring AI-assisted workflow
+                        automation in the media domain. My recent proof of
+                        concept uses n8n to orchestrate LLM-driven flows and a
+                        graph database to support natural language search,
+                        helping turn loosely structured media knowledge into
+                        something teams can query more intuitively.
                       </p>
                     </div>
                   </div>
@@ -94,6 +91,22 @@ const style = {
                 </div>
               </div>
               <div className="col-md-4 text-center animate-box">
+                <div className="services color-6">
+                  <span className="icon">
+                    <i className="icon-lab2" />
+                  </span>
+                  <div className="desc">
+                    <h3>LLM and Workflow Automation</h3>
+                    <p>
+                      I have built POCs with n8n and LLMs in the media domain,
+                      using graph-backed data models to enable natural
+                      language search and more intuitive knowledge discovery
+                      workflows.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4 text-center animate-box">
                 <div className="services color-5">
                   <span className="icon">
                     <i className="icon-briefcase" />
@@ -133,10 +146,11 @@ const style = {
                   <div className="desc">
                     <h3>Frameworks/Tools</h3>
                     <p>
-                      Built Rest-API using django framework in Python. I am
-                      Using Groovy script to write Jenkins pipeline. Have vast
-                      knowledge in SQL Service, have tuned perfomance and
-                      designed datamodel.
+                      Built APIs using Django and automation flows using tools
+                      like Jenkins, Groovy, and n8n. I am also exploring LLM
+                      integrations, graph-backed search, and data models that
+                      make natural language discovery practical for real-world
+                      products.
                     </p>
                   </div>
                 </div>

@@ -4,7 +4,7 @@ export default class Timeline extends Component {
   render() {
     return (
       <div>
-        <section className="colorlib-experience" data-section="timeline">
+        <section id="timeline" className="colorlib-experience" data-section="timeline">
           <div className="colorlib-narrow-content">
             <div className="row">
               <div
@@ -28,7 +28,7 @@ export default class Timeline extends Component {
                       </div>
                       <div className="timeline-label">
                         <h2>
-                          <a href="#">Working at ITV</a> <span>2023 June - present</span>
+                          Working at ITV <span>2023 June - present</span>
                         </h2>
                         <p>
                           Scala Engineer where I build webservice to consume and process Millions of data. I build application using scala, React and deploy them as docker container using nomad as container orchestration and GitHub Action for Continuous Integration.                  
@@ -46,7 +46,7 @@ export default class Timeline extends Component {
                       </div>
                       <div className="timeline-label">
                         <h2>
-                          <a href="#">Work at Intent HQ</a> <span>2021 Sept - 2023 June</span>
+                          Work at Intent HQ <span>2021 Sept - 2023 June</span>
                         </h2>
                         <p>
                           Scala Engineer where I build webservice to consume and process Millions of data. I build application using scala, React and deploy them as docker container using nomad as container orchestration and GitHub Action for Continuous Integration.                  
@@ -64,7 +64,7 @@ export default class Timeline extends Component {
                       </div>
                       <div className="timeline-label">
                         <h2>
-                          <a href="#">Work at TCS</a> <span>2008 - 2021 Aug</span>
+                          Work at TCS <span>2008 - 2021 Aug</span>
                         </h2>
                         <p>
                           I have started my career with TCS on Dec, 2008. My key
@@ -91,9 +91,7 @@ export default class Timeline extends Component {
                       </div>
                       <div className="timeline-label">
                         <h2>
-                          <a href="#">
-                            Undergraduation at Pondicherry University
-                          </a>{" "}
+                          Undergraduation at Pondicherry University{" "}
                           <span>2004-2008</span>
                         </h2>
                         <p>
@@ -116,7 +114,7 @@ export default class Timeline extends Component {
                       </div>
                       <div className="timeline-label">
                         <h2>
-                          <a href="#">Higher Education</a>{" "}
+                          Higher Education{" "}
                           <span>2002-2004</span>
                         </h2>
                         <p>

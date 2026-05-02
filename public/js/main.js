@@ -145,11 +145,12 @@
 
 	var clickMenu = function() {
 
-		$('#navbar a:not([class="external"])').click(function(event){
+		$('#navbar [data-nav-section]:not(.external)').click(function(event){
 			var section = $(this).data('nav-section'),
 				navbar = $('#navbar');
 
 				if ( $('[data-section="' + section + '"]').length ) {
+			    	navActive(section);
 			    	$('html, body').animate({
 			        	scrollTop: $('[data-section="' + section + '"]').offset().top - 55
 			    	}, 500);
@@ -174,7 +175,7 @@
 		var $el = $('#navbar > ul');
 		$el.find('li').removeClass('active');
 		$el.each(function(){
-			$(this).find('a[data-nav-section="'+section+'"]').closest('li').addClass('active');
+			$(this).find('[data-nav-section="'+section+'"]').closest('li').addClass('active');
 		});
 
 	};
@@ -182,23 +183,38 @@
 	var navigationSection = function() {
 
 		var $section = $('section[data-section]');
-		
-		$section.waypoint(function(direction) {
-		  	
-		  	if (direction === 'down') {
-		    	navActive($(this.element).data('section'));
-		  	}
-		}, {
-	  		offset: '150px'
-		});
+		var $lastSection = $section.last();
 
-		$section.waypoint(function(direction) {
-		  	if (direction === 'up') {
-		    	navActive($(this.element).data('section'));
-		  	}
-		}, {
-		  	offset: function() { return -$(this.element).height() + 155; }
-		});
+		var updateActiveSection = function() {
+			if (!$lastSection.length) {
+				return;
+			}
+
+			var scrollTop = $(window).scrollTop();
+			var threshold = scrollTop + 155;
+			var scrollBottom = scrollTop + $(window).height();
+			var documentBottom = $(document).height();
+			var activeSection = null;
+
+			if (documentBottom - scrollBottom <= 5) {
+				navActive($lastSection.data('section'));
+				return;
+			}
+
+			$section.each(function() {
+				if ($(this).offset().top <= threshold) {
+					activeSection = $(this).data('section');
+				}
+			});
+
+			if (activeSection) {
+				navActive(activeSection);
+			}
+		};
+
+		$(window).off('scroll.section-active resize.section-active');
+		$(window).on('scroll.section-active resize.section-active', updateActiveSection);
+		updateActiveSection();
 
 	};
 

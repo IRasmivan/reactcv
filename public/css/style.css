@@ -78,7 +78,9 @@ figure {
   float: left;
   width: 300px;
   position: fixed;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   z-index: 1001;
   background: #f2f3f7;
   -webkit-transition: 0.5s;
@@ -86,13 +88,13 @@ figure {
   transition: 0.5s; }
   @media screen and (max-width: 768px) {
     #colorlib-aside {
-      width: 300px;
-      -moz-transform: translateX(-300px);
-      -webkit-transform: translateX(-300px);
-      -ms-transform: translateX(-300px);
-      -o-transform: translateX(-300px);
-      transform: translateX(-300px);
-      padding-top: 4em; } }
+      width: 280px;
+      -moz-transform: translateX(-280px);
+      -webkit-transform: translateX(-280px);
+      -ms-transform: translateX(-280px);
+      -o-transform: translateX(-280px);
+      transform: translateX(-280px);
+      padding: 4.5em 0 1.5em; } }
   #colorlib-aside .author-img {
     width: 150px;
     height: 150px;
@@ -141,23 +143,30 @@ figure {
         font-weight: 500;
         text-transform: uppercase;
         letter-spacing: 1px; }
-        #colorlib-aside #colorlib-main-menu ul li a {
+        #colorlib-aside #colorlib-main-menu ul li a,
+        #colorlib-aside #colorlib-main-menu ul li .sidebar-nav-link {
           color: rgba(0, 0, 0, 0.7);
           text-decoration: none;
           position: relative;
           padding: 10px 0;
           font-family: "Quicksand", Arial, sans-serif;
+          background: transparent;
+          border: 0;
+          display: inline-block;
+          cursor: pointer;
+          text-align: center;
           -webkit-transition: 0.3s;
           -o-transition: 0.3s;
           transition: 0.3s; }
-          #colorlib-aside #colorlib-main-menu ul li a:after {
+          #colorlib-aside #colorlib-main-menu ul li a:after,
+          #colorlib-aside #colorlib-main-menu ul li .sidebar-nav-link:after {
             content: "";
             position: absolute;
             height: 1px;
             bottom: 7px;
             left: 0;
             right: 0;
-            background-color: #2c98f0;
+            background-color: #b06a3c;
             visibility: hidden;
             -webkit-transform: scaleX(0);
             -moz-transform: scaleX(0);
@@ -169,19 +178,28 @@ figure {
             -ms-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             -o-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-          #colorlib-aside #colorlib-main-menu ul li a:hover {
+          #colorlib-aside #colorlib-main-menu ul li a:hover,
+          #colorlib-aside #colorlib-main-menu ul li a:focus-visible,
+          #colorlib-aside #colorlib-main-menu ul li .sidebar-nav-link:hover,
+          #colorlib-aside #colorlib-main-menu ul li .sidebar-nav-link:focus-visible {
             text-decoration: none;
-            color: black; }
-            #colorlib-aside #colorlib-main-menu ul li a:hover:after {
+            color: black;
+            outline: none; }
+            #colorlib-aside #colorlib-main-menu ul li a:hover:after,
+            #colorlib-aside #colorlib-main-menu ul li a:focus-visible:after,
+            #colorlib-aside #colorlib-main-menu ul li .sidebar-nav-link:hover:after,
+            #colorlib-aside #colorlib-main-menu ul li .sidebar-nav-link:focus-visible:after {
               visibility: visible;
               -webkit-transform: scaleX(1);
               -moz-transform: scaleX(1);
               -ms-transform: scaleX(1);
               -o-transform: scaleX(1);
               transform: scaleX(1); }
-        #colorlib-aside #colorlib-main-menu ul li.active a {
-          color: #2c98f0; }
-          #colorlib-aside #colorlib-main-menu ul li.active a:after {
+        #colorlib-aside #colorlib-main-menu ul li.active a,
+        #colorlib-aside #colorlib-main-menu ul li.active .sidebar-nav-link {
+          color: #b06a3c; }
+          #colorlib-aside #colorlib-main-menu ul li.active a:after,
+          #colorlib-aside #colorlib-main-menu ul li.active .sidebar-nav-link:after {
             visibility: visible;
             -webkit-transform: scaleX(1);
             -moz-transform: scaleX(1);
@@ -189,39 +207,51 @@ figure {
             -o-transform: scaleX(1);
             transform: scaleX(1); }
 
-#colorlib-aside #colorlib-main-menu.social-links ul li {
+#colorlib-aside .social-links ul {
+  text-align: center;
+  margin: 0 0 1.25em;
+  padding: 0; }
+
+#colorlib-aside .social-links ul li {
   display: inline-block;
   margin: 0 8px 10px 0; }
 
-#colorlib-aside #colorlib-main-menu.social-links ul li a {
+#colorlib-aside .social-links ul li a {
   display: inline-block;
   padding: 6px;
   color: rgba(0, 0, 0, 0.55); }
 
-#colorlib-aside #colorlib-main-menu.social-links ul li a:after {
+#colorlib-aside .social-links ul li a:after {
   display: none; }
 
-#colorlib-aside #colorlib-main-menu.social-links ul li a:hover {
+#colorlib-aside .social-links ul li a:hover,
+#colorlib-aside .social-links ul li a:focus-visible {
   color: rgba(0, 0, 0, 0.75);
+  outline: none;
   -webkit-transform: translateY(-2px);
   -moz-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   -o-transform: translateY(-2px);
   transform: translateY(-2px); }
 
-#colorlib-aside #colorlib-main-menu.social-links ul li a:hover .icon-facebook2 {
+#colorlib-aside .social-links ul li a:hover .icon-facebook2,
+#colorlib-aside .social-links ul li a:focus-visible .icon-facebook2 {
   color: #1877f2; }
 
-#colorlib-aside #colorlib-main-menu.social-links ul li a:hover .icon-twitter2 {
+#colorlib-aside .social-links ul li a:hover .icon-twitter2,
+#colorlib-aside .social-links ul li a:focus-visible .icon-twitter2 {
   color: #1da1f2; }
 
-#colorlib-aside #colorlib-main-menu.social-links ul li a:hover .icon-instagram {
+#colorlib-aside .social-links ul li a:hover .icon-instagram,
+#colorlib-aside .social-links ul li a:focus-visible .icon-instagram {
   color: #e4405f; }
 
-#colorlib-aside #colorlib-main-menu.social-links ul li a:hover .icon-linkedin2 {
+#colorlib-aside .social-links ul li a:hover .icon-linkedin2,
+#colorlib-aside .social-links ul li a:focus-visible .icon-linkedin2 {
   color: #0a66c2; }
 
-#colorlib-aside #colorlib-main-menu.social-links ul li a:hover .icon-github {
+#colorlib-aside .social-links ul li a:hover .icon-github,
+#colorlib-aside .social-links ul li a:focus-visible .icon-github {
   color: #24292f; }
   #colorlib-aside .colorlib-footer {
     font-size: 15px;
@@ -265,7 +295,7 @@ figure {
   @media screen and (max-width: 768px) {
     #colorlib-main {
       width: 100%;
-      padding: 0 1em; } }
+      padding: 0 0.75em; } }
 
 #colorlib-hero {
   min-height: 500px;
@@ -387,23 +417,23 @@ body.offcanvas {
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
     transform: translateX(0);
-    width: 300px;
+    width: 280px;
     background: #f2f3f7;
     z-index: 999;
     position: fixed; }
   body.offcanvas #colorlib-main, body.offcanvas .colorlib-nav-toggle {
     top: 0;
-    -moz-transform: translateX(300px);
-    -webkit-transform: translateX(300px);
-    -ms-transform: translateX(300px);
-    -o-transform: translateX(300px);
-    transform: translateX(300px); }
+    -moz-transform: translateX(280px);
+    -webkit-transform: translateX(280px);
+    -ms-transform: translateX(280px);
+    -o-transform: translateX(280px);
+    transform: translateX(280px); }
 
 .colorlib-narrow-content {
   padding: 0 2.5em; }
   @media screen and (max-width: 768px) {
     .colorlib-narrow-content {
-      padding: 0; } }
+      padding: 0 0.9em; } }
 
 .no-gutters {
   margin: 0;
@@ -1362,7 +1392,9 @@ body.offcanvas {
 
 .colorlib-nav-toggle {
   cursor: pointer;
-  text-decoration: none; }
+  text-decoration: none;
+  background: transparent;
+  border: 0; }
   .colorlib-nav-toggle.active i::before, .colorlib-nav-toggle.active i::after {
     background: #000; }
   .colorlib-nav-toggle.dark.active i::before, .colorlib-nav-toggle.dark.active i::after {
@@ -1461,6 +1493,19 @@ body.offcanvas {
   .col-xxs-12 {
     float: none;
     width: 100%; } }
+
+@media screen and (max-width: 768px) {
+  #colorlib-aside #colorlib-logo {
+    font-size: 24px; }
+  #colorlib-aside .email,
+  #colorlib-aside .number {
+    font-size: 11px;
+    line-height: 1.6;
+    padding: 0 1rem; }
+  #colorlib-aside .colorlib-footer {
+    font-size: 13px;
+    padding: 0 16px; }
+}
 
 .row-bottom-padded-lg {
   padding-bottom: 7em; }

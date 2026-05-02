@@ -4,7 +4,7 @@ export default class About extends Component {
   render() {
     return (
       <div>
-        <section className="colorlib-about" data-section="about">
+        <section id="about" className="colorlib-about" data-section="about">
           <div className="colorlib-narrow-content">
             <div className="row">
               <div className="col-md-12">

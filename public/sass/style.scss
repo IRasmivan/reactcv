@@ -187,14 +187,16 @@ figure {
 
 	width: 300px;
 	position: fixed;
+	overflow-x: hidden;
+	overflow-y: auto;
 	z-index: 1001;
 	background: $brand-gray;
 	@include transition(.5s);
 
 	@media screen and (max-width: $screen-sm) {
-		width: 300px;
-		@include translateX(-300px);
-		padding-top: 4em;
+		width: 280px;
+		@include translateX(-280px);
+		padding: 4.5em 0 1.5em;
 	}
 	.author-img{
 		width: 150px;
@@ -243,12 +245,17 @@ figure {
 				font-weight: 500;
 				text-transform: uppercase;
 				letter-spacing: 1px;
-				a {
+				a, .sidebar-nav-link {
 					color: rgba(0,0,0,.7);
 					text-decoration: none;
 					position: relative;
 					padding: 10px 0;
 					font-family: $font-primary;
+					background: transparent;
+					border: 0;
+					display: inline-block;
+					cursor: pointer;
+					text-align: center;
 					@include transition(.3s);
 					&:after {
 						content: "";
@@ -257,7 +264,7 @@ figure {
 						bottom: 7px;
 						left: 0;
 						right: 0;
-						background-color: $brand-primary;
+						background-color: #b06a3c;
 						visibility: hidden;
 						-webkit-transform: scaleX(0);
 						-moz-transform: scaleX(0);
@@ -270,9 +277,10 @@ figure {
 						-o-transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
 						transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
 					}
-					&:hover {
+					&:hover, &:focus-visible {
 						text-decoration: none;
 						color: rgba(0,0,0,1);
+						outline: none;
 						
 						&:after {
 							visibility: visible;
@@ -285,8 +293,8 @@ figure {
 					}
 				}
 				&.active {
-					a {
-						color: $brand-primary;
+					a, .sidebar-nav-link {
+						color: #b06a3c;
 						&:after {
 							visibility: visible;
 							-webkit-transform: scaleX(1);
@@ -353,7 +361,7 @@ figure {
 
 #colorlib-hero {
 	min-height: 500px;
-	background: $brand-white url(../images/loader.gif) no-repeat center center;
+	background: $brand-white;
 	width: 100%;
 	float: left;
 	margin-bottom: 10em;

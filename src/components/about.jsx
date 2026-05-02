@@ -60,7 +60,10 @@ export default class About extends Component {
               </div>
             </div>
             <div className="row row-pt-md">
-              <div className="col-md-4 text-center animate-box">
+              <div
+                className="col-md-4 text-center animate-box"
+                data-animate-effect="fadeInLeft"
+              >
                 <div className="services color-1">
                   <span className="icon">
                     <i className="icon-code" />
@@ -75,7 +78,10 @@ export default class About extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 text-center animate-box">
+              <div
+                className="col-md-4 text-center animate-box"
+                data-animate-effect="fadeInTop"
+              >
                 <div className="services color-3">
                   <span className="icon">
                     <i className="icon-globe" />
@@ -90,7 +96,10 @@ export default class About extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 text-center animate-box">
+              <div
+                className="col-md-4 text-center animate-box"
+                data-animate-effect="fadeInRight"
+              >
                 <div className="services color-6">
                   <span className="icon">
                     <i className="icon-lab2" />
@@ -106,7 +115,10 @@ export default class About extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 text-center animate-box">
+              <div
+                className="col-md-4 text-center animate-box"
+                data-animate-effect="fadeInLeft"
+              >
                 <div className="services color-5">
                   <span className="icon">
                     <i className="icon-briefcase" />
@@ -122,7 +134,10 @@ export default class About extends Component {
                 </div>
               </div>
 
-              <div className="col-md-4 text-center animate-box">
+              <div
+                className="col-md-4 text-center animate-box"
+                data-animate-effect="fadeInBottom"
+              >
                 <div className="services color-2">
                   <span className="icon">
                     <i className="icon-phone3" />
@@ -138,7 +153,10 @@ export default class About extends Component {
                 </div>
               </div>
 
-              <div className="col-md-4 text-center animate-box">
+              <div
+                className="col-md-4 text-center animate-box"
+                data-animate-effect="fadeInRight"
+              >
                 <div className="services color-4">
                   <span className="icon">
                     <i className="icon-tag" />
@@ -155,7 +173,10 @@ export default class About extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 text-center animate-box">
+              <div
+                className="col-md-4 text-center animate-box"
+                data-animate-effect="fadeInTop"
+              >
                 <div className="services color-6">
                   <span className="icon">
                     <i className="icon-stopwatch" />

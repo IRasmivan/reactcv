@@ -70,7 +70,7 @@ export default class Sidebar extends Component {
                 </ul>
               </div>
             </nav>
-            <nav id="colorlib-main-menu">
+            <nav id="colorlib-main-menu" className="social-links">
               <ul>
                 <li>
                   <a
@@ -146,7 +146,7 @@ export default class Sidebar extends Component {
               </p>
               <p>
                 <small>
-                  Automated build using Docker and deployment using Jenkins
+                  Automated build using Docker and deployment using GitHub Action
                 </small>
               </p>
             </div>

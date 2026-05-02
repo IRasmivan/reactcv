@@ -188,6 +188,41 @@ figure {
             -ms-transform: scaleX(1);
             -o-transform: scaleX(1);
             transform: scaleX(1); }
+
+#colorlib-aside #colorlib-main-menu.social-links ul li {
+  display: inline-block;
+  margin: 0 8px 10px 0; }
+
+#colorlib-aside #colorlib-main-menu.social-links ul li a {
+  display: inline-block;
+  padding: 6px;
+  color: rgba(0, 0, 0, 0.55); }
+
+#colorlib-aside #colorlib-main-menu.social-links ul li a:after {
+  display: none; }
+
+#colorlib-aside #colorlib-main-menu.social-links ul li a:hover {
+  color: rgba(0, 0, 0, 0.75);
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  -o-transform: translateY(-2px);
+  transform: translateY(-2px); }
+
+#colorlib-aside #colorlib-main-menu.social-links ul li a:hover .icon-facebook2 {
+  color: #1877f2; }
+
+#colorlib-aside #colorlib-main-menu.social-links ul li a:hover .icon-twitter2 {
+  color: #1da1f2; }
+
+#colorlib-aside #colorlib-main-menu.social-links ul li a:hover .icon-instagram {
+  color: #e4405f; }
+
+#colorlib-aside #colorlib-main-menu.social-links ul li a:hover .icon-linkedin2 {
+  color: #0a66c2; }
+
+#colorlib-aside #colorlib-main-menu.social-links ul li a:hover .icon-github {
+  color: #24292f; }
   #colorlib-aside .colorlib-footer {
     font-size: 15px;
     text-align: center;
@@ -654,10 +689,24 @@ body.offcanvas {
 .services {
   margin-bottom: 80px;
   position: relative;
-  z-index: 0; }
+  z-index: 0;
+  -webkit-transition: -webkit-transform 0.35s ease, -webkit-box-shadow 0.35s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  will-change: transform; }
   @media screen and (max-width: 768px) {
     .services {
       margin-bottom: 4em; } }
+  .services:hover {
+    -webkit-transform: translateY(-12px);
+    -moz-transform: translateY(-12px);
+    -ms-transform: translateY(-12px);
+    -o-transform: translateY(-12px);
+    transform: translateY(-12px);
+    -webkit-box-shadow: 0px 22px 48px -20px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0px 22px 48px -20px rgba(0, 0, 0, 0.35);
+    -ms-box-shadow: 0px 22px 48px -20px rgba(0, 0, 0, 0.35);
+    -o-box-shadow: 0px 22px 48px -20px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 22px 48px -20px rgba(0, 0, 0, 0.35); }
   .services .icon {
     position: absolute;
     top: -20px;
@@ -667,7 +716,15 @@ body.offcanvas {
     height: 50px;
     display: table;
     margin: 0 auto;
-    background: #2c98f0; }
+    background: #2c98f0;
+    -webkit-transition: -webkit-transform 0.35s ease;
+    transition: transform 0.35s ease; }
+    .services:hover .icon {
+      -webkit-transform: translateY(-4px) scale(1.04);
+      -moz-transform: translateY(-4px) scale(1.04);
+      -ms-transform: translateY(-4px) scale(1.04);
+      -o-transform: translateY(-4px) scale(1.04);
+      transform: translateY(-4px) scale(1.04); }
     .services .icon:before, .services .icon:after {
       position: absolute;
       left: 0;
@@ -694,7 +751,9 @@ body.offcanvas {
       display: table-cell;
       vertical-align: middle; }
   .services .desc {
-    margin-top: 60px; }
+    margin-top: 60px;
+    -webkit-transition: color 0.25s ease;
+    transition: color 0.25s ease; }
     .services .desc h3 {
       font-size: 16px;
       font-weight: 700;

@@ -1,25 +1,22 @@
 {
-  "name": "portfolio-app",
-  "version": "0.1.0",
-  "private": true,
-  "homepage": "https://irasmivan.github.io/reactcv",
-  "dependencies": {
-    "gh-pages": "^2.0.1",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5",
-    "yarn": "^1.13.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
+  "short_name": "Rasmivan",
+  "name": "Rasmivan Portfolio",
+  "description": "Portfolio site for Rasmivan Ilangovan, a full stack engineer focused on microservices, React, DevOps, and AI-assisted workflow tooling.",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.ico",
+      "sizes": "16x16 24x24 32x32 48x48",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#2c98f0",
+  "background_color": "#f2f3f7"
 }

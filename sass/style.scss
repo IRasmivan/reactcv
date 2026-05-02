@@ -121,6 +121,7 @@ body {
 	font-size: 15px;
 	line-height: 1.8;
 	color: rgba(0,0,0,.7);
+	background: linear-gradient(180deg, #f8f3ed 0%, #f3ede6 100%);
 	@media screen and (max-width: $screen-md) {
 		font-size: 16px;
 	}	
@@ -179,6 +180,15 @@ figure {
     width: 100%;
     overflow: hidden;
     position: relative;
+	background:
+		linear-gradient(90deg, #f2f3f7 0, #f2f3f7 300px, rgba(242, 243, 247, 0) 300px),
+		radial-gradient(circle at top left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 28%),
+		linear-gradient(180deg, #f8f3ed 0%, #f3ede6 100%);
+	@media screen and (max-width: $screen-sm) {
+		background:
+			radial-gradient(circle at top left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 28%),
+			linear-gradient(180deg, #f8f3ed 0%, #f3ede6 100%);
+	}
 }
 #colorlib-aside {
 	padding-top: 3em;
@@ -187,14 +197,16 @@ figure {
 
 	width: 300px;
 	position: fixed;
+	overflow-x: hidden;
+	overflow-y: auto;
 	z-index: 1001;
 	background: $brand-gray;
 	@include transition(.5s);
 
 	@media screen and (max-width: $screen-sm) {
-		width: 300px;
-		@include translateX(-300px);
-		padding-top: 4em;
+		width: 280px;
+		@include translateX(-280px);
+		padding: 4.5em 0 1.5em;
 	}
 	.author-img{
 		width: 150px;
@@ -243,12 +255,17 @@ figure {
 				font-weight: 500;
 				text-transform: uppercase;
 				letter-spacing: 1px;
-				a {
+				a, .sidebar-nav-link {
 					color: rgba(0,0,0,.7);
 					text-decoration: none;
 					position: relative;
 					padding: 10px 0;
 					font-family: $font-primary;
+					background: transparent;
+					border: 0;
+					display: inline-block;
+					cursor: pointer;
+					text-align: center;
 					@include transition(.3s);
 					&:after {
 						content: "";
@@ -257,7 +274,7 @@ figure {
 						bottom: 7px;
 						left: 0;
 						right: 0;
-						background-color: $brand-primary;
+						background-color: #b06a3c;
 						visibility: hidden;
 						-webkit-transform: scaleX(0);
 						-moz-transform: scaleX(0);
@@ -270,9 +287,10 @@ figure {
 						-o-transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
 						transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
 					}
-					&:hover {
+					&:hover, &:focus-visible {
 						text-decoration: none;
 						color: rgba(0,0,0,1);
+						outline: none;
 						
 						&:after {
 							visibility: visible;
@@ -285,8 +303,8 @@ figure {
 					}
 				}
 				&.active {
-					a {
-						color: $brand-primary;
+					a, .sidebar-nav-link {
+						color: #b06a3c;
 						&:after {
 							visibility: visible;
 							-webkit-transform: scaleX(1);
@@ -343,6 +361,7 @@ figure {
 #colorlib-main {
 	width: calc(100% - 300px);
 	float: right;
+	background: transparent;
 	@include transition(.5s);
 	@media screen and (max-width: $screen-sm) {
 		width: 100%;
@@ -353,7 +372,7 @@ figure {
 
 #colorlib-hero {
 	min-height: 500px;
-	background: $brand-white url(../images/loader.gif) no-repeat center center;
+	background: transparent;
 	width: 100%;
 	float: left;
 	margin-bottom: 10em;
@@ -848,110 +867,93 @@ margin-left: -20px;
 	margin-bottom: 80px;
 	position: relative;
 	z-index: 0;
+	overflow: visible;
+	border-radius: 28px;
+	padding: 6.2rem 1.5rem 1.6rem;
+	border: 1px solid rgba(64, 39, 24, 0.08);
+	background: rgba(255, 255, 255, 0.92);
+	transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 	@media screen and(max-width: $screen-sm){
 		margin-bottom: 4em;
 	}
+	&:hover{
+		border-color: rgba(176, 106, 60, 0.16);
+	}
 	.icon{
 		position: absolute;
-		top: -20px;
+		top: -28px;
 		left: 0;
 		right: 0;
-		width: 100px;
-		height: 50px;
-		display: table;
+		width: 84px;
+		height: 84px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		margin: 0 auto;
 		background: $brand-primary;
+		border-radius: 24px;
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 12px 28px -18px rgba(0, 0, 0, 0.4);
 		&:before, &:after{
-			position: absolute;
-			left: 0;
-			right: 0;
-			content: '';
-		}
-		&:before{
-			top: -30px;
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-width: 0 50px 30px 50px;
-			border-color: transparent transparent $brand-primary transparent;
-		}
-		&:after{
-			bottom: -30px;
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-width: 30px 50px 0 50px;
-			border-color: $brand-primary transparent transparent transparent;
+			display: none;
 		}
 		i{
 			font-size: 30px;
 			color: $brand-white;
 			z-index: 1;
-			display: table-cell;
-			vertical-align: middle;
+			display: block;
+			line-height: 1;
+		}
+	}
+	&:hover{
+		.icon{
+			transform: translateY(-6px) scale(1.04);
 		}
 	}
 	.desc{
-		margin-top: 60px;
+		margin-top: 0.25rem;
 		h3{
-			font-size: 16px;
+			font-size: 17px;
+			margin-bottom: 14px;
 			font-weight: 700;
 			text-transform: uppercase;
+			letter-spacing: 1.2px;
+		}
+		p{
+			margin-bottom: 0;
+			color: rgba(0,0,0,.66);
 		}
 	}
+	&.color-1{
+		border-bottom: 2px solid $brand-primary;
+	}
 	&.color-2{
+		border-bottom: 2px solid $brand-color-2;
 		.icon{
 			background: $brand-color-2;
-			&:before{
-				border-color: transparent transparent $brand-color-2 transparent;
-			}
-			&:after{
-				border-color: $brand-color-2 transparent transparent transparent;
-			}
 		}
 	}
 	&.color-3{
+		border-bottom: 2px solid $brand-color-3;
 		.icon{
 			background: $brand-color-3;
-			&:before{
-				border-color: transparent transparent $brand-color-3 transparent;
-			}
-			&:after{
-				border-color: $brand-color-3 transparent transparent transparent;
-			}
 		}
 	}
 	&.color-4{
+		border-bottom: 2px solid $brand-color-4;
 		.icon{
 			background: $brand-color-4;
-			&:before{
-				border-color: transparent transparent $brand-color-4 transparent;
-			}
-			&:after{
-				border-color: $brand-color-4 transparent transparent transparent;
-			}
 		}
 	}
 	&.color-5{
+		border-bottom: 2px solid $brand-color-5;
 		.icon{
 			background: $brand-color-5;
-			&:before{
-				border-color: transparent transparent $brand-color-5 transparent;
-			}
-			&:after{
-				border-color: $brand-color-5 transparent transparent transparent;
-			}
 		}
 	}
 	&.color-6{
+		border-bottom: 2px solid $brand-color-6;
 		.icon{
 			background: $brand-color-6;
-			&:before{
-				border-color: transparent transparent $brand-color-6 transparent;
-			}
-			&:after{
-				border-color: $brand-color-6 transparent transparent transparent;
-			}
 		}
 	}
 }
@@ -1121,19 +1123,28 @@ margin-left: -20px;
 	float: left;
 	background: $brand-white;
 	margin-bottom: 3em;
+	border-radius: 22px;
+	overflow: hidden;
+	border: 1px solid rgba(64, 39, 24, 0.08);
+	box-shadow: 0 18px 50px -34px rgba(59, 37, 23, 0.38);
+	transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 	@media screen and(max-width: $screen-sm){
 		margin-bottom: 3em;
 	}
 	.blog-img{
 		width: 100%;
-		float: left;
 		overflow: hidden;
 		position: relative;
 		z-index: 1;
-		margin-bottom: 25px;
+		margin-bottom: 0;
+		aspect-ratio: 16 / 10;
+		background: linear-gradient(180deg, #f3ede6 0%, #efe4d8 100%);
 		img {
-			position: relative;
-			max-width: 100%;
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 			-webkit-transform: scale(1.0);
 			-moz-transform: scale(1.0);
 			-ms-transform: scale(1.0);
@@ -1143,32 +1154,49 @@ margin-left: -20px;
 		}
 	}
 	.desc{
+		padding: 1.4rem 1.5rem 1.5rem;
+	}
+	.blog-meta{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 12px;
+		margin-bottom: 1rem;
+		font-size: 11px;
+		letter-spacing: 1.3px;
+		text-transform: uppercase;
+		@media screen and (max-width: $screen-xs) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+	.blog-date{
+		color: rgba(49, 33, 22, 0.55);
+	}
+	.blog-tag{
+		padding: 6px 10px;
+		border-radius: 999px;
+		background: rgba(176, 106, 60, 0.12);
+		color: #8d542f;
+		font-weight: 700;
+	}
+	.desc{
 		h3{
-			font-size: 16px;
-			margin-bottom: 25px;
-			line-height: auto;
-			font-weight: 500;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-			font-family: $font-primary;
+			font-size: 25px;
+			margin-bottom: 14px;
+			line-height: 1.15;
+			font-weight: 700;
+			text-transform: none;
+			letter-spacing: 0;
+			font-family: $font-secondary;
 			a{
 				color: $brand-black;
 				text-decoration: none;
 			}
 		}
-		span{
-			display: block;
-			margin-bottom: 20px;
-			font-size: 12px;
-			color: rgba(0,0,0,.4) !important;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-			font-weight: 400;
-			small{
-				i{
-					color: lighten($brand-black,60%);
-				}
-			}
+		p{
+			margin-bottom: 1.35rem;
+			color: rgba(0,0,0,.65);
 		}
 		.lead{
 			font-size: 12px;
@@ -1177,7 +1205,24 @@ margin-left: -20px;
 			color: $brand-black;
 		}
 	}
+	.blog-link{
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		color: #8d542f;
+		font-size: 12px;
+		font-weight: 700;
+		letter-spacing: 1.4px;
+		text-transform: uppercase;
+		i{
+			font-size: 12px;
+			transition: transform 0.25s ease;
+		}
+	}
 	&:hover{
+		border-color: rgba(176, 106, 60, 0.2);
+		transform: translateY(-8px);
+		box-shadow: 0 28px 65px -34px rgba(59, 37, 23, 0.52);
 		.blog-img{
 			img{
 				-webkit-transform: scale(1.1);
@@ -1186,6 +1231,9 @@ margin-left: -20px;
 				-o-transform: scale(1.1);
 				transform: scale(1.1);
 			}
+		}
+		.blog-link i{
+			transform: translateX(4px);
 		}
 	}
 }

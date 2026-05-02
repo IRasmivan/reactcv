@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Rasmivan favicon</title>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#102a43" />
+      <stop offset="100%" stop-color="#0ea5a4" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)" />
+  <path d="M18 48V16h14.2c8 0 12.6 4.1 12.6 10.9 0 4.9-2.5 8.4-7 10L47 48H38l-8-10.2H26V48zm8-16.5h5.1c3.8 0 5.8-1.6 5.8-4.4s-2-4.3-5.8-4.3H26z" fill="#f8fafc" />
+  <circle cx="47" cy="18" r="5" fill="#f59e0b" />
+</svg>

@@ -1,5 +1,8 @@
 name: Node CI - ReactCV
 on: [push]
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,5 +18,25 @@ jobs:
         npm ci
         npm run build --if-present
         npm test
+      env:
+        CI: true
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/master'
+    steps:
+    - uses: actions/checkout@v4
+    - name: Use Node.js 20
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: npm
+    - name: Deploy to GitHub Pages
+      run: |
+        npm ci
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        npm run deploy
       env:
         CI: true

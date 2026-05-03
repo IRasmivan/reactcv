@@ -110,17 +110,86 @@ figure {
     height: 150px;
     margin: 0 auto;
     margin-bottom: 30px;
+    border: 4px solid rgba(255, 250, 245, 0.96);
+    background-color: rgba(255, 249, 242, 0.9);
+    background-size: cover;
+    background-position: center 28%;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: 0 22px 44px -26px rgba(59, 37, 23, 0.4), inset 0 0 0 1px rgba(120, 84, 57, 0.08);
+    -moz-box-shadow: 0 22px 44px -26px rgba(59, 37, 23, 0.4), inset 0 0 0 1px rgba(120, 84, 57, 0.08);
+    -ms-box-shadow: 0 22px 44px -26px rgba(59, 37, 23, 0.4), inset 0 0 0 1px rgba(120, 84, 57, 0.08);
+    -o-box-shadow: 0 22px 44px -26px rgba(59, 37, 23, 0.4), inset 0 0 0 1px rgba(120, 84, 57, 0.08);
+    box-shadow: 0 22px 44px -26px rgba(59, 37, 23, 0.4), inset 0 0 0 1px rgba(120, 84, 57, 0.08);
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     border-radius: 50%; }
-  #colorlib-aside .email {
-    display: block;
-    font-size: 12px;}
-  #colorlib-aside .number {
-    display: block;
-    margin-bottom: 2em;
-    font-size: 12px;}  
+  #colorlib-aside .contact-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 10px;
+    padding: 0.38rem 0.8rem;
+    border-radius: 999px;
+    color: #5a5148;
+    background: rgba(245, 237, 227, 0.52);
+    border: 1px solid rgba(120, 84, 57, 0.1);
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: left;
+    text-decoration: none;
+    -webkit-transition: background-color 0.25s ease, color 0.25s ease, -webkit-transform 0.25s ease;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease; }
+    #colorlib-aside .contact-item:hover,
+    #colorlib-aside .contact-item:focus-visible {
+      color: #3b2517;
+      background: rgba(255, 248, 241, 0.78);
+      -webkit-transform: translateY(-1px);
+      -moz-transform: translateY(-1px);
+      -ms-transform: translateY(-1px);
+      -o-transform: translateY(-1px);
+      transform: translateY(-1px);
+      -webkit-box-shadow: 0 12px 24px -20px rgba(59, 37, 23, 0.5);
+      box-shadow: 0 12px 24px -20px rgba(59, 37, 23, 0.5); }
+  #colorlib-aside .contact-item__icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    color: #fff; }
+    #colorlib-aside .contact-item__icon i {
+      font-size: 15px;
+      line-height: 1; }
+  #colorlib-aside .contact-item__text {
+    display: inline-block;
+    overflow-wrap: anywhere; }
+  #colorlib-aside .contact-item--email .contact-item__icon {
+    background: #2c98f0;
+    -webkit-box-shadow: 0 0 0 4px rgba(44, 152, 240, 0.12);
+    box-shadow: 0 0 0 4px rgba(44, 152, 240, 0.12); }
+  #colorlib-aside .contact-item--phone .contact-item__icon {
+    background: #f9bf3f;
+    -webkit-box-shadow: 0 0 0 4px rgba(249, 191, 63, 0.14);
+    box-shadow: 0 0 0 4px rgba(249, 191, 63, 0.14); }
+  #colorlib-aside .contact-item--whatsapp {
+    margin-bottom: 2em; }
+  #colorlib-aside .contact-item--whatsapp .contact-item__icon {
+    background: #25d366;
+    -webkit-box-shadow: 0 0 0 4px rgba(37, 211, 102, 0.14);
+    box-shadow: 0 0 0 4px rgba(37, 211, 102, 0.14); }
   #colorlib-aside #colorlib-logo {
     text-align: right;
     font-weight: 700;
@@ -648,17 +717,17 @@ body.offcanvas {
 
 .skills-board {
   margin: 0 0 2.75rem;
-  padding: 1.35rem 1.35rem 1.15rem;
+  padding: 1.35rem 1.35rem 1.55rem;
   position: relative;
   overflow: hidden;
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.84);
-  border: 1px solid rgba(64, 39, 24, 0.08);
-  -webkit-box-shadow: 0 22px 55px -38px rgba(59, 37, 23, 0.34);
-  -moz-box-shadow: 0 22px 55px -38px rgba(59, 37, 23, 0.34);
-  -ms-box-shadow: 0 22px 55px -38px rgba(59, 37, 23, 0.34);
-  -o-box-shadow: 0 22px 55px -38px rgba(59, 37, 23, 0.34);
-  box-shadow: 0 22px 55px -38px rgba(59, 37, 23, 0.34);
+  background: rgba(255, 251, 247, 0.94);
+  border: 1px solid rgba(120, 84, 57, 0.08);
+  -webkit-box-shadow: 0 20px 48px -40px rgba(59, 37, 23, 0.24);
+  -moz-box-shadow: 0 20px 48px -40px rgba(59, 37, 23, 0.24);
+  -ms-box-shadow: 0 20px 48px -40px rgba(59, 37, 23, 0.24);
+  -o-box-shadow: 0 20px 48px -40px rgba(59, 37, 23, 0.24);
+  box-shadow: 0 20px 48px -40px rgba(59, 37, 23, 0.24);
   -webkit-animation: skillsBoardReveal 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
   animation: skillsBoardReveal 0.85s cubic-bezier(0.22, 1, 0.36, 1) both; }
   .skills-board:before {
@@ -2153,12 +2222,12 @@ body.offcanvas {
     padding: 0; }
   #colorlib-aside #colorlib-logo {
     font-size: 24px; }
-  #colorlib-aside .email,
-  #colorlib-aside .number {
+  #colorlib-aside .contact-item {
     font-size: 11px;
     line-height: 1.6;
     padding: 0 1rem;
-    overflow-wrap: anywhere; }
+    width: auto;
+    justify-content: center; }
   #colorlib-aside #colorlib-main-menu ul li {
     margin-bottom: 8px; }
   #colorlib-aside .social-links ul {

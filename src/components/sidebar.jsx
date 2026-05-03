@@ -59,6 +59,18 @@ export default class Sidebar extends Component {
                 </span>
                 <span className="contact-item__text">+91-848-953-2988</span>
               </a>
+              <a
+                className="sidebar-resume-link"
+                href="https://drive.google.com/file/d/1QtOa-M_GLgSHOWkckpWT6WKhDliHkA3_/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View resume"
+              >
+                <span className="sidebar-resume-link__icon" aria-hidden="true">
+                  <i className="icon-download4" />
+                </span>
+                <span className="sidebar-resume-link__text">View Resume</span>
+              </a>
             </div>
             <nav id="colorlib-main-menu" className="navbar" aria-label="Section navigation">
               <div id="navbar" className="collapse">

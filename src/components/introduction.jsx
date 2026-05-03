@@ -39,6 +39,13 @@ export default class Introduction extends Component {
                             </a>
                             <a
                               className="btn btn-primary btn-learn"
+                              href="mailto:rasmivancse@gmail.com"
+                              aria-label="Email Rasmivan"
+                            >
+                              Email Me <i className="icon-mail" />
+                            </a>
+                            <a
+                              className="btn btn-primary btn-learn"
                               href="https://github.com/IRasmivan"
                               target="_blank"
                               rel="noopener noreferrer"

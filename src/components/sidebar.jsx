@@ -27,16 +27,38 @@ export default class Sidebar extends Component {
               <h1 id="colorlib-logo">
                 <a href="/">Rasmivan Ilangovan</a>
               </h1>
-              <span className="email">
-                <i className="icon-mail" aria-hidden="true" />
-                rasmivancse@gmail.com
-              </span>
-              <span className="email">
-                <i className="icon-phone" aria-hidden="true" /> +44-745-966-9676
-              </span>
-              <span className="number">
-                <i className="icon-whatsapp" aria-hidden="true" /> +91-848-953-2988
-              </span>
+              <a
+                className="contact-item contact-item--email"
+                href="mailto:rasmivancse@gmail.com"
+                aria-label="Email rasmivancse@gmail.com"
+              >
+                <span className="contact-item__icon" aria-hidden="true">
+                  <i className="icon-mail" />
+                </span>
+                <span className="contact-item__text">rasmivancse@gmail.com</span>
+              </a>
+              <a
+                className="contact-item contact-item--phone"
+                href="tel:+447459669676"
+                aria-label="Call +44-745-966-9676"
+              >
+                <span className="contact-item__icon" aria-hidden="true">
+                  <i className="icon-phone" />
+                </span>
+                <span className="contact-item__text">+44-745-966-9676</span>
+              </a>
+              <a
+                className="contact-item contact-item--whatsapp"
+                href="https://wa.me/918489532988"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Message on WhatsApp +91-848-953-2988"
+              >
+                <span className="contact-item__icon" aria-hidden="true">
+                  <i className="icon-whatsapp" />
+                </span>
+                <span className="contact-item__text">+91-848-953-2988</span>
+              </a>
             </div>
             <nav id="colorlib-main-menu" className="navbar" aria-label="Section navigation">
               <div id="navbar" className="collapse">
@@ -135,22 +157,21 @@ export default class Sidebar extends Component {
             <div className="colorlib-footer">
               <p>
                 <small>
-                  Made with <i className="icon-code" aria-hidden="true" />
+                  Built in React
                   <br />
-                  Thanks{" "}
+                  Inspired by{" "}
                   <a
                     href="https://colorlib.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Colorlib
-                  </a>{" "}
-                  for inspiration
+                  </a>
                 </small>
               </p>
               <p>
                 <small>
-                  Automated build using Docker and deployment using GitHub Action
+                  Built and deployed via GitHub Actions
                 </small>
               </p>
             </div>

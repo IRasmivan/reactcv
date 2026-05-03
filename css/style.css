@@ -863,8 +863,16 @@ body.offcanvas {
   grid-template-columns: minmax(0, 210px) minmax(0, 1fr);
   gap: 18px;
   align-items: start;
-  padding: 0.9rem 0;
-  border-bottom: 1px solid rgba(64, 39, 24, 0.08);
+  padding: 1.1rem 1.1rem 1.05rem;
+  margin-bottom: 14px;
+  border: 1px solid rgba(120, 84, 57, 0.08);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.78);
+  -webkit-box-shadow: 0 16px 34px -30px rgba(59, 37, 23, 0.3);
+  -moz-box-shadow: 0 16px 34px -30px rgba(59, 37, 23, 0.3);
+  -ms-box-shadow: 0 16px 34px -30px rgba(59, 37, 23, 0.3);
+  -o-box-shadow: 0 16px 34px -30px rgba(59, 37, 23, 0.3);
+  box-shadow: 0 16px 34px -30px rgba(59, 37, 23, 0.3);
   opacity: 0;
   -webkit-transform: translateY(14px);
   -moz-transform: translateY(14px);
@@ -872,12 +880,24 @@ body.offcanvas {
   -o-transform: translateY(14px);
   transform: translateY(14px);
   -webkit-animation: skillsRowReveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
-  animation: skillsRowReveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+  animation: skillsRowReveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+  .skills-row:hover {
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    -o-transform: translateY(-4px);
+    transform: translateY(-4px);
+    border-color: rgba(176, 106, 60, 0.16);
+    -webkit-box-shadow: 0 22px 42px -30px rgba(59, 37, 23, 0.38);
+    -moz-box-shadow: 0 22px 42px -30px rgba(59, 37, 23, 0.38);
+    -ms-box-shadow: 0 22px 42px -30px rgba(59, 37, 23, 0.38);
+    -o-box-shadow: 0 22px 42px -30px rgba(59, 37, 23, 0.38);
+    box-shadow: 0 22px 42px -30px rgba(59, 37, 23, 0.38); }
   .skills-row:last-child {
-    border-bottom: 0;
-    padding-bottom: 0; }
+    margin-bottom: 0; }
   .skills-row:first-of-type {
-    padding-top: 0; }
+    padding-top: 1.1rem; }
   .skills-row:nth-of-type(1) {
     -webkit-animation-delay: 0.08s;
     animation-delay: 0.08s; }
@@ -965,7 +985,8 @@ body.offcanvas {
   @media screen and (max-width: 768px) {
     .skills-row {
       grid-template-columns: 1fr;
-      gap: 12px; }
+      gap: 12px;
+      padding: 1rem 0.95rem; }
       .skills-row__title-wrap {
         gap: 10px; }
       .skills-row__marker {

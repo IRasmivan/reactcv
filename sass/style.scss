@@ -593,17 +593,27 @@ figure {
 					gap: 12px;
 					margin-top: 6px;
 					.btn {
+						display: inline-flex;
+						align-items: center;
+						justify-content: center;
+						gap: 10px;
 						margin-right: 0;
+						i {
+							display: inline-block;
+							line-height: 1;
+							font-size: 15px;
+							vertical-align: middle;
+						}
 					}
 				}
 				.btn{
-					font-size: 12px;
+					font-size: 13px;
 					text-transform: uppercase;
 					letter-spacing: 2px;
 					color: $brand-black;
 					padding: 10px 15px !important;
 					border: none;
-					font-weight: 400;
+					font-weight: 500;
 					&.btn-learn{
 						color: $brand-black;
 						border: 1px solid $brand-black;

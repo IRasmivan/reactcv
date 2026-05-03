@@ -48,7 +48,7 @@ export default class Sidebar extends Component {
                   </li>
                   <li>
                     <a href="#about" data-nav-section="about">
-                      About
+                      Profile
                     </a>
                   </li>
                   {/* <li>

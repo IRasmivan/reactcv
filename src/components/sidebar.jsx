@@ -95,36 +95,6 @@ export default class Sidebar extends Component {
               <ul>
                 <li>
                   <a
-                    href="https://www.facebook.com/rasmivan.ilangovan"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Facebook"
-                  >
-                    <i className="icon-facebook2" aria-hidden="true" />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://twitter.com/rasmivan"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Twitter"
-                  >
-                    <i className="icon-twitter2" aria-hidden="true" />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.instagram.com/rasmivan/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                  >
-                    <i className="icon-instagram" aria-hidden="true" />
-                  </a>
-                </li>
-                <li>
-                  <a
                     href="https://www.linkedin.com/in/rasmivan-ilangovan-a9853b70/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -143,15 +113,16 @@ export default class Sidebar extends Component {
                     <i className="icon-github" aria-hidden="true" />
                   </a>
                 </li>
-                {/* <li>
+                <li>
                   <a
-                    href="https://medium.com/@dhruv.barochia34788"
+                    href="https://blog.rasmivan.com/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Blog"
                   >
-                    <i className="icon-blogger2" />
+                    <i className="icon-blogger2" aria-hidden="true" />
                   </a>
-                </li> */}
+                </li>
               </ul>
             </nav>
             <div className="colorlib-footer">

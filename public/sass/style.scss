@@ -3,22 +3,6 @@ $font-secondary: 'Playfair Display', Georgia, serif;
 
 // Overrides
 $grid-gutter-width: 40px !default; 
-$border-radius-base:  4px !default;
-$padding-base-vertical: 14px !default;
-
-$brand-primary: #2c98f0 !default;
-$brand-footer: #2C2C2C !default;
-
-$brand-color-1: #2c98f0 !default;
-$brand-color-2: #ec5453 !default;
-$brand-color-3: #f9bf3f !default;
-$brand-color-4: #a84cb8 !default;
-$brand-color-5: #2fa499 !default;
-$brand-color-6: #4054b2 !default;
-
-
-$brand-white: #fff;
-$brand-black: #000;
 $brand-darker: #444;
 $brand-gray: #f2f3f7;
 $brand-lighter: #e9e9e9;
@@ -287,12 +271,14 @@ figure {
 		text-align: right;
 		font-weight: 700;
 		font-size: 22px;
+		font-family: $font-primary;
 		margin-bottom: .5em;
 		display: block;
 		width: 100%;
 		a{
 			display: block;
 			text-align: center;
+			font-family: $font-primary;
 			color: $brand-black;
 			padding-right: .3em;
 		}
@@ -457,9 +443,15 @@ figure {
 			li {
 				background-repeat: no-repeat;
 				background-size: cover;
-				background-position: bottom center;
+				background-position: 72% center;
 				min-height: 400px;
 				position: relative;
+				.overlay {
+					position: absolute;
+					inset: 0;
+					background: linear-gradient(90deg, rgba(253, 247, 240, 0.9) 0%, rgba(253, 247, 240, 0.68) 34%, rgba(253, 247, 240, 0.08) 58%, rgba(253, 247, 240, 0) 78%);
+					pointer-events: none;
+				}
 			}
 		}
 		.flex-control-nav {
@@ -514,11 +506,16 @@ figure {
 				}
 				h1 {
 					margin-bottom: 20px;
-					font-size: 60px;
-					line-height: 1.3;
+					max-width: 560px;
+					font-family: $font-primary;
+					font-size: 52px;
+					line-height: 1.12;
 					font-weight: 700;
+					letter-spacing: -0.02em;
 					@media screen and (max-width: $screen-sm) {
-						font-size: 28px;
+						max-width: none;
+						font-size: 32px;
+						line-height: 1.16;
 					}
 				}
 				h2 {
@@ -527,9 +524,16 @@ figure {
 					margin-bottom: 30px;
 					font-weight: 300;
 					font-family: $font-primary;
+					max-width: 620px;
+					color: rgba(24, 17, 12, 0.9);
+					text-shadow: 0 1px 0 rgba(255, 251, 246, 0.55);
 					a{
 						color: rgba($brand-primary,.8);
 						border-bottom: 1px solid rgba($brand-primary,.7)
+					}
+					@media screen and (max-width: $screen-sm) {
+						font-size: 16px;
+						text-align: left;
 					}
 				}
 				.heading-section{
@@ -537,13 +541,22 @@ figure {
 					@media screen and (max-width: $screen-sm){
 						font-size: 30px;
 					}
-				}s
+				}
 				.colorlib-lead{
 					font-size: 20px;
 					color: $brand-white;
 				}
 				p{
 					margin-bottom: 0;
+				}
+				.hero-actions {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 12px;
+					margin-top: 6px;
+					.btn {
+						margin-right: 0;
+					}
 				}
 				.btn{
 					font-size: 12px;
@@ -564,6 +577,11 @@ figure {
 					}
 					@media screen and (max-width: $screen-sm ) {
 						width: 100%;
+					}
+				}
+				@media screen and (max-width: $screen-sm ) {
+					.hero-actions {
+						gap: 10px;
 					}
 				}
 			}

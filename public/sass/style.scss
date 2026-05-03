@@ -434,8 +434,6 @@ figure {
 				min-height: 700px;
 				padding: 2.5em;
 				position: relative;
-				.desc{
-				}
 				@media screen and (max-width: $screen-sm ) {
 					text-align: center;
 				}
@@ -571,6 +569,22 @@ body {
 	letter-spacing: 5px;
 	line-height: 1.8;
 	position: relative;
+	display: inline-block;
+	padding-bottom: 14px;
+	animation: headingRise 0.75s ease-out both;
+	&:after{
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 72px;
+		height: 3px;
+		border-radius: 999px;
+		background: linear-gradient(90deg, #b06a3c 0%, rgba(176, 106, 60, 0.18) 100%);
+		background-size: 200% 100%;
+		transform-origin: left center;
+		animation: headingLineIn 0.9s 0.18s cubic-bezier(0.22, 1, 0.36, 1) both, headingStrokeFlow 3.6s 1.1s ease-in-out infinite alternate;
+	}
 	span {
 		display: block;
 	}
@@ -586,6 +600,63 @@ body {
 	color: lighten($brand-black,60%);
 	font-weight: 500;
 	letter-spacing: 5px;
+	animation: headingMetaFade 0.65s ease-out both;
+}
+
+@keyframes headingRise {
+	0% {
+		opacity: 0;
+		transform: translateY(18px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes headingLineIn {
+	0% {
+		opacity: 0;
+		transform: scaleX(0.2);
+	}
+	100% {
+		opacity: 1;
+		transform: scaleX(1);
+	}
+}
+
+@keyframes headingStrokeFlow {
+	0% {
+		background-position: 0% 50%;
+		box-shadow: 0 0 0 rgba(176, 106, 60, 0);
+	}
+	100% {
+		background-position: 100% 50%;
+		box-shadow: 0 0 14px rgba(176, 106, 60, 0.12);
+	}
+}
+
+@keyframes headingMetaFade {
+	0% {
+		opacity: 0;
+		letter-spacing: 7px;
+		transform: translateY(10px);
+	}
+	100% {
+		opacity: 1;
+		letter-spacing: 5px;
+		transform: translateY(0);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.colorlib-heading,
+	.heading-meta {
+		animation: none !important;
+	}
+	.colorlib-heading:after {
+		animation: none !important;
+	}
 }
 
 //ABOUT

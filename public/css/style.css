@@ -2353,7 +2353,8 @@ body.offcanvas {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  row-gap: 18px; }
   .experience-grid > [class*="col-"] {
     float: none;
     display: -webkit-box;
@@ -2363,7 +2364,9 @@ body.offcanvas {
     margin-right: 0; }
   .experience-grid .services {
     width: 100%;
-    margin-bottom: 32px; }
+    margin-bottom: 18px; }
+  .experience-grid .services:hover {
+    z-index: 3; }
   .experience-grid > [class*="col-"]:last-child {
     margin-left: auto;
     margin-right: auto; }

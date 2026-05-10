@@ -4,20 +4,38 @@ export default class Blog extends Component {
   render() {
     const posts = [
       {
-        date: "May 11, 2019",
-        category: "CV in React",
-        title: "Build your CV using React",
-        description: "This blog is to walk you through to build your CV using react.",
-        image: "images/blog-1.png",
-        url: "https://blog.rasmivan.com/"
-      },
-      {
-        date: "May 12, 2019",
-        category: "Blog Design",
-        title: "Building a Blog",
-        description: "This blog is to walk you through to build your own Blog site using style with bulma and blog content from contentful.",
-        image: "images/blog-2.png",
-        url: "https://blog.rasmivan.com/"
+			date: "May 2026",
+			category: "LinkedIn Article",
+			title: "Math of Computing: Understanding Undo via Backtracking",
+			description: "A LinkedIn article on the math behind undo operations and how backtracking shapes efficient problem solving.",
+			image: "images/blog-1.png",
+			url: "https://www.linkedin.com/pulse/math-computing-understanding-undo-backtracking-rasmivan-ilangovan-meohe/",
+			platform: "linkedin"
+		},
+		{
+			date: "May 2026",
+			category: "LinkedIn Article",
+			title: "From Math to Machine: The Elegance of Binary Exponentiation",
+			description: "A LinkedIn article that connects mathematical intuition to the binary exponentiation technique used in efficient computation.",
+			image: "images/blog-2.png",
+			url: "https://www.linkedin.com/pulse/from-math-machine-elegance-binary-exponentiation-rasmivan-ilangovan-wdyte/",
+			platform: "linkedin"
+		},
+		{
+			date: "May 12, 2019",
+			category: "Blog Design",
+			title: "Building a Blog",
+			description: "This blog is to walk you through to build your own Blog site using style with bulma and blog content from contentful.",
+			image: "images/blog-2.png",
+			url: "https://blog.rasmivan.com/"
+		},
+		{
+			date: "May 11, 2019",
+			category: "CV in React",
+			title: "Build your CV using React",
+			description: "This blog is to walk you through to build your CV using react.",
+			image: "images/blog-1.png",
+			url: "https://blog.rasmivan.com/"
       }
     ];
 
@@ -35,7 +53,7 @@ export default class Blog extends Component {
 					{posts.map((post, index) => (
 						<div
 							className="col-md-6 col-sm-6 animate-box"
-							data-animate-effect={index === 0 ? "fadeInLeft" : "fadeInRight"}
+							data-animate-effect={index % 2 === 0 ? "fadeInLeft" : "fadeInRight"}
 							key={post.title}
 						>
 							<article className="blog-entry">
@@ -45,7 +63,11 @@ export default class Blog extends Component {
 								<div className="desc">
 									<div className="blog-meta">
 										<span className="blog-date">{post.date}</span>
-										<span className="blog-tag">{post.category}</span>
+										<span className="blog-tag">
+											{post.platform === "linkedin" && <i className="icon-linkedin2" aria-hidden="true" />}
+											{post.platform === "linkedin" ? " " : ""}
+											{post.category}
+										</span>
 									</div>
 									<h3>
 										<a href={post.url} target="_blank" rel="noopener noreferrer">
@@ -54,7 +76,9 @@ export default class Blog extends Component {
 									</h3>
 									<p>{post.description}</p>
 									<a className="blog-link" href={post.url} target="_blank" rel="noopener noreferrer">
-										Read article <i className="icon-arrow-right3" aria-hidden="true" />
+										{post.platform === "linkedin" && <i className="icon-linkedin2" aria-hidden="true" />}
+										{post.platform === "linkedin" ? " View on LinkedIn " : "Read article "}
+										<i className="icon-arrow-right3" aria-hidden="true" />
 									</a>
 								</div>
 							</article>

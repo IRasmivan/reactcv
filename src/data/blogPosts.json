@@ -1,5 +1,14 @@
 [
   {
+    "date": "May 12, 2026",
+    "category": "LinkedIn Article",
+    "title": "The Engineering of Decision Trees: Navigating State Space with Backtracking",
+    "description": "How do you transform a raw, ambiguous string of digits like this 25525511135 into a structured, valid network protocol? It isn't just about simple iteration; it’s about the elegance of Backtracking and State Space Exploration.",
+    "image": "images/blog-1.png",
+    "url": "https://www.linkedin.com/pulse/engineering-decision-trees-navigating-state-space-rasmivan-ilangovan-3ucme/",
+    "platform": "linkedin"
+  },
+  {
     "date": "May 2026",
     "category": "LinkedIn Article",
     "title": "Math of Computing: Understanding Undo via Backtracking",

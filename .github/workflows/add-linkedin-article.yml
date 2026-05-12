@@ -1,5 +1,8 @@
 name: Add LinkedIn Article
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 on:
   workflow_dispatch:
     inputs:
@@ -19,11 +22,6 @@ on:
         description: Optional display date
         required: false
         type: string
-      image:
-        description: Optional image path
-        required: false
-        default: images/blog-1.png
-        type: string
 
 permissions:
   contents: write
@@ -33,13 +31,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
       - name: Use Node.js LTS
         uses: actions/setup-node@v5
         with:
           node-version: lts/*
+          cache: npm
       - name: Add article to blog data
         run: |
-          command=(npm run add:linkedin -- --title "$INPUT_TITLE" --url "$INPUT_URL" --description "$INPUT_DESCRIPTION" --image "$INPUT_IMAGE")
+          command=(npm run add:linkedin -- --title "$INPUT_TITLE" --url "$INPUT_URL" --description "$INPUT_DESCRIPTION")
           if [ -n "$INPUT_DATE" ]; then
             command+=(--date "$INPUT_DATE")
           fi
@@ -49,15 +50,39 @@ jobs:
           INPUT_URL: ${{ inputs.url }}
           INPUT_DESCRIPTION: ${{ inputs.description }}
           INPUT_DATE: ${{ inputs.date }}
-          INPUT_IMAGE: ${{ inputs.image }}
+      - name: Install dependencies
+        run: npm ci
       - name: Commit article data
+        id: commit_article
         run: |
           if git diff --quiet -- src/data/blogPosts.json; then
             echo "No blog changes to commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git add src/data/blogPosts.json
           git commit -m "Add LinkedIn article"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+      - name: Build site
+        if: steps.commit_article.outputs.changed == 'true'
+        run: npm run build
+        env:
+          CI: true
+      - name: Deploy to GitHub Pages
+        if: steps.commit_article.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          npm run deploy
+        env:
+          CI: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}

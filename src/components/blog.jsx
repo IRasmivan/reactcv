@@ -21,9 +21,6 @@ export default class Blog extends Component {
 							key={post.url || post.title}
 						>
 							<article className="blog-entry">
-								<a href={post.url} className="blog-img" target="_blank" rel="noopener noreferrer">
-									<img src={post.image} className="img-responsive" alt={post.title} />
-								</a>
 								<div className="desc">
 									<div className="blog-meta">
 										<span className="blog-date">{post.date}</span>

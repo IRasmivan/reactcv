@@ -4,7 +4,6 @@
     "category": "LinkedIn Article",
     "title": "The Engineering of Decision Trees: Navigating State Space with Backtracking",
     "description": "How do you transform a raw, ambiguous string of digits like this 25525511135 into a structured, valid network protocol? It isn't just about simple iteration; it’s about the elegance of Backtracking and State Space Exploration.",
-    "image": "images/blog-1.png",
     "url": "https://www.linkedin.com/pulse/engineering-decision-trees-navigating-state-space-rasmivan-ilangovan-3ucme/",
     "platform": "linkedin"
   },
@@ -13,7 +12,6 @@
     "category": "LinkedIn Article",
     "title": "Math of Computing: Understanding Undo via Backtracking",
     "description": "A LinkedIn article on the math behind undo operations and how backtracking shapes efficient problem solving.",
-    "image": "images/blog-1.png",
     "url": "https://www.linkedin.com/pulse/math-computing-understanding-undo-backtracking-rasmivan-ilangovan-meohe/",
     "platform": "linkedin"
   },
@@ -22,7 +20,6 @@
     "category": "LinkedIn Article",
     "title": "From Math to Machine: The Elegance of Binary Exponentiation",
     "description": "A LinkedIn article that connects mathematical intuition to the binary exponentiation technique used in efficient computation.",
-    "image": "images/blog-2.png",
     "url": "https://www.linkedin.com/pulse/from-math-machine-elegance-binary-exponentiation-rasmivan-ilangovan-wdyte/",
     "platform": "linkedin"
   },
@@ -31,7 +28,6 @@
     "category": "Blog Design",
     "title": "Building a Blog",
     "description": "This blog is to walk you through to build your own Blog site using style with bulma and blog content from contentful.",
-    "image": "images/blog-2.png",
     "url": "https://blog.rasmivan.com/"
   },
   {
@@ -39,7 +35,6 @@
     "category": "CV in React",
     "title": "Build your CV using React",
     "description": "This blog is to walk you through to build your CV using react.",
-    "image": "images/blog-1.png",
     "url": "https://blog.rasmivan.com/"
   }
 ]

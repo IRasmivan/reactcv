@@ -37,7 +37,6 @@ const printHelp = () => {
 
 Optional:
   --date "May 12, 2026"
-  --image "images/blog-1.png"
   --category "LinkedIn Article"
 `);
 };
@@ -65,7 +64,6 @@ const article = {
   category: args.category || "LinkedIn Article",
   title: args.title,
   description: args.description,
-  image: args.image || "images/blog-1.png",
   url: args.url,
   platform: "linkedin"
 };

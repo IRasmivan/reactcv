@@ -1,0 +1,36 @@
+[
+  {
+    "date": "May 2026",
+    "category": "LinkedIn Article",
+    "title": "Math of Computing: Understanding Undo via Backtracking",
+    "description": "A LinkedIn article on the math behind undo operations and how backtracking shapes efficient problem solving.",
+    "image": "images/blog-1.png",
+    "url": "https://www.linkedin.com/pulse/math-computing-understanding-undo-backtracking-rasmivan-ilangovan-meohe/",
+    "platform": "linkedin"
+  },
+  {
+    "date": "May 2026",
+    "category": "LinkedIn Article",
+    "title": "From Math to Machine: The Elegance of Binary Exponentiation",
+    "description": "A LinkedIn article that connects mathematical intuition to the binary exponentiation technique used in efficient computation.",
+    "image": "images/blog-2.png",
+    "url": "https://www.linkedin.com/pulse/from-math-machine-elegance-binary-exponentiation-rasmivan-ilangovan-wdyte/",
+    "platform": "linkedin"
+  },
+  {
+    "date": "May 12, 2019",
+    "category": "Blog Design",
+    "title": "Building a Blog",
+    "description": "This blog is to walk you through to build your own Blog site using style with bulma and blog content from contentful.",
+    "image": "images/blog-2.png",
+    "url": "https://blog.rasmivan.com/"
+  },
+  {
+    "date": "May 11, 2019",
+    "category": "CV in React",
+    "title": "Build your CV using React",
+    "description": "This blog is to walk you through to build your CV using react.",
+    "image": "images/blog-1.png",
+    "url": "https://blog.rasmivan.com/"
+  }
+]

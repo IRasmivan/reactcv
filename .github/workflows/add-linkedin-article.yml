@@ -1,0 +1,63 @@
+name: Add LinkedIn Article
+
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        description: Article title
+        required: true
+        type: string
+      url:
+        description: LinkedIn article URL
+        required: true
+        type: string
+      description:
+        description: Short summary for the card
+        required: true
+        type: string
+      date:
+        description: Optional display date
+        required: false
+        type: string
+      image:
+        description: Optional image path
+        required: false
+        default: images/blog-1.png
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  add-article:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Use Node.js LTS
+        uses: actions/setup-node@v5
+        with:
+          node-version: lts/*
+      - name: Add article to blog data
+        run: |
+          command=(npm run add:linkedin -- --title "$INPUT_TITLE" --url "$INPUT_URL" --description "$INPUT_DESCRIPTION" --image "$INPUT_IMAGE")
+          if [ -n "$INPUT_DATE" ]; then
+            command+=(--date "$INPUT_DATE")
+          fi
+          "${command[@]}"
+        env:
+          INPUT_TITLE: ${{ inputs.title }}
+          INPUT_URL: ${{ inputs.url }}
+          INPUT_DESCRIPTION: ${{ inputs.description }}
+          INPUT_DATE: ${{ inputs.date }}
+          INPUT_IMAGE: ${{ inputs.image }}
+      - name: Commit article data
+        run: |
+          if git diff --quiet -- src/data/blogPosts.json; then
+            echo "No blog changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/blogPosts.json
+          git commit -m "Add LinkedIn article"
+          git push

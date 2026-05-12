@@ -15,9 +15,10 @@ jobs:
       with:
         node-version: lts/*
         cache: npm
+    - name: Install dependencies
+      run: npm ci
     - name: npm install, build, and test
       run: |
-        npm ci
         npm run build --if-present
         npm test
       env:
@@ -34,9 +35,10 @@ jobs:
       with:
         node-version: lts/*
         cache: npm
+    - name: Install dependencies
+      run: npm ci
     - name: Deploy to GitHub Pages
       run: |
-        npm ci
         git config user.name "github-actions[bot]"
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"

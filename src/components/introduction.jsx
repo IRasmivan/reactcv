@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { resumeUrl } from "../data/profile";
 
 export default class Introduction extends Component {
   render() {
@@ -30,7 +31,7 @@ export default class Introduction extends Component {
                           <p className="hero-actions">
                             <a
                               className="btn btn-primary btn-learn"
-                              href="https://drive.google.com/file/d/1QtOa-M_GLgSHOWkckpWT6WKhDliHkA3_/view"
+                              href={resumeUrl}
                               target="_blank"
                               rel="noopener noreferrer"
                             >

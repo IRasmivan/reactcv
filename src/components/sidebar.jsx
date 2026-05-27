@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { resumeUrl } from "../data/profile";
 
 export default class Sidebar extends Component {
   render() {
@@ -61,7 +62,7 @@ export default class Sidebar extends Component {
               </a>
               <a
                 className="sidebar-resume-link"
-                href="https://drive.google.com/file/d/1QtOa-M_GLgSHOWkckpWT6WKhDliHkA3_/view"
+                href={resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="View resume"

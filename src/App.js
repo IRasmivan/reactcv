@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Sidebar from "./components/sidebar";
+import CookieConsentBanner from "./components/cookieConsentBanner";
 import Introduction from "./components/introduction";
 import About from "./components/about";
 import Blog from "./components/blog";
@@ -16,10 +17,9 @@ class App extends Component {
             <About />
             <Timeline />
             <Blog />
-            {/* <Projects />
-            <Blog /> */}
           </div>
         </div>
+        <CookieConsentBanner />
       </div>
     );
   }

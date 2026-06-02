@@ -23,6 +23,7 @@ jobs:
         npm test
       env:
         CI: true
+        REACT_APP_GA_MEASUREMENT_ID: ${{ secrets.REACT_APP_GA_MEASUREMENT_ID }}
 
   deploy:
     runs-on: ubuntu-latest
@@ -47,3 +48,4 @@ jobs:
         CI: true
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GITHUB_REPOSITORY: ${{ github.repository }}
+        REACT_APP_GA_MEASUREMENT_ID: ${{ secrets.REACT_APP_GA_MEASUREMENT_ID }}

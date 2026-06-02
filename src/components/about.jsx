@@ -16,22 +16,18 @@ export default class About extends Component {
   render() {
     const skillGroups = [
       {
-        title: "Core Engineering",
+        title: "Engineering",
         markerClass: "color-1",
         items: [
           { label: "Scala", icon: "https://cdn.simpleicons.org/scala/DC322F" },
           { label: "Go", icon: "https://cdn.simpleicons.org/go/00ADD8" },
-          { label: "Cats", icon: "https://cdn.simpleicons.org/scala/DC322F" },
           {
             label: "Java",
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
           },
           { label: "Spring Boot", icon: "https://cdn.simpleicons.org/springboot/6DB33F" },
-          { label: "Spring Batch", icon: "https://cdn.simpleicons.org/spring/6DB33F" },
           { label: "Angular", icon: "https://cdn.simpleicons.org/angular/DD0031" },
           { label: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
-          { label: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/000000" },
-          { label: "JavaScript", icon: "https://cdn.simpleicons.org/javascript/F7DF1E" },
           { label: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/3178C6" },
         ],
       },
@@ -43,17 +39,12 @@ export default class About extends Component {
           { label: "Google Gemini", icon: "https://cdn.simpleicons.org/googlegemini/8E75B2" },
           { label: "GitHub Copilot", icon: "https://cdn.simpleicons.org/githubcopilot/000000" },
           { label: "OpenAI", icon: "https://cdn.simpleicons.org/openai/412991" },
-          { label: "n8n AI Orchestration", icon: "https://cdn.simpleicons.org/n8n/EA4B71" },
           { label: "LLM Workflow Design" },
           { label: "Prompt Engineering" },
-          {
-            label: "Google Apps Script",
-            icon: "https://cdn.simpleicons.org/googleappsscript/34A853",
-          },
         ],
       },
       {
-        title: "Cloud & Platform",
+        title: "Cloud, Data & Messaging",
         markerClass: "color-2",
         items: [
           {
@@ -61,15 +52,7 @@ export default class About extends Component {
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
           },
           {
-            label: "AWS EC2",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
-          },
-          {
             label: "AWS S3",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
-          },
-          {
-            label: "AWS IAM",
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
           },
           {
@@ -85,95 +68,43 @@ export default class About extends Component {
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
           },
           {
-            label: "AWS SNS",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+            label: "PostgreSQL",
+            icon: "https://cdn.simpleicons.org/postgresql/4169E1",
           },
           {
-            label: "AWS Secrets Manager",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+            label: "MongoDB",
+            icon: "https://cdn.simpleicons.org/mongodb/47A248",
           },
           {
-            label: "AWS MediaConvert",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+            label: "Kafka",
+            icon: "https://cdn.simpleicons.org/apachekafka/231F20",
           },
           {
-            label: "AWS ECR",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
-          },
-          { label: "BlackPearl" },
-          { label: "Zoho CMS", icon: "https://cdn.simpleicons.org/zoho/C8202F" },
-          {
-            label: "Azure Logic Apps",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
+            label: "RabbitMQ",
+            icon: "https://cdn.simpleicons.org/rabbitmq/FF6600",
           },
           {
-            label: "Azure Service Bus",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
-          },
-          {
-            label: "Azure PaaS",
+            label: "Azure",
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
           },
           { label: "Contentful", icon: "https://cdn.simpleicons.org/contentful/2478CC" },
         ],
       },
       {
-        title: "Data & Messaging",
-        markerClass: "color-5",
-        items: [
-          { label: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb/47A248" },
-          { label: "PostgreSQL", icon: "https://cdn.simpleicons.org/postgresql/4169E1" },
-          {
-            label: "AWS DynamoDB",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
-          },
-          {
-            label: "AWS RDS",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
-          },
-          { label: "RabbitMQ", icon: "https://cdn.simpleicons.org/rabbitmq/FF6600" },
-          { label: "Kafka", icon: "https://cdn.simpleicons.org/apachekafka/231F20" },
-        ],
-      },
-      {
-        title: "DevOps & Delivery",
+        title: "Delivery & Observability",
         markerClass: "color-3",
         items: [
           { label: "Terraform", icon: "https://cdn.simpleicons.org/terraform/844FBA" },
-          { label: "aws-vault", icon: "https://cdn.simpleicons.org/amazonwebservices/FF9900" },
           { label: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
           {
             label: "GitHub Actions",
             icon: "https://cdn.simpleicons.org/githubactions/2088FF",
           },
           { label: "Jenkins", icon: "https://cdn.simpleicons.org/jenkins/D24939" },
-          {
-            label: "Azure DevOps",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuredevops/azuredevops-original.svg",
-          },
-          { label: "Jira", icon: "https://cdn.simpleicons.org/jira/0052CC" },
-          { label: "Confluence", icon: "https://cdn.simpleicons.org/confluence/172B4D" },
           { label: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
-          { label: "Kubernetes", icon: "https://cdn.simpleicons.org/kubernetes/326CE5" },
           { label: "Nomad", icon: "https://cdn.simpleicons.org/nomad/00CA8E" },
           { label: "Prometheus", icon: "https://cdn.simpleicons.org/prometheus/E6522C" },
           { label: "Grafana", icon: "https://cdn.simpleicons.org/grafana/F46800" },
-          { label: "PagerDuty", icon: "https://cdn.simpleicons.org/pagerduty/06AC38" },
-          {
-            label: "Slack",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg",
-          },
-        ],
-      },
-      {
-        title: "Architecture & Ways of Working",
-        markerClass: "color-6",
-        items: [
-          { label: "Microservice Architecture" },
-          { label: "DSA" },
-          { label: "Agile" },
-          { label: "Scrum" },
-          { label: "SAFe Agile" },
         ],
       },
     ];
@@ -192,32 +123,40 @@ export default class About extends Component {
                     <div className="about-desc">
                       <span className="heading-meta">About Me</span>
                       <h2 className="colorlib-heading">Who Am I?</h2>
+                      <div className="profile-summary" aria-label="Professional summary">
+                        <div className="profile-summary__item">
+                          <span className="profile-summary__label">Current role</span>
+                          <span className="profile-summary__value">Scala Engineer at ITV</span>
+                        </div>
+                        <div className="profile-summary__item">
+                          <span className="profile-summary__label">Core focus</span>
+                          <span className="profile-summary__value">Backend systems, AWS workflows, CI/CD, Terraform, LLMs, and n8n</span>
+                        </div>
+                        <div className="profile-summary__item">
+                          <span className="profile-summary__label">Experience</span>
+                          <span className="profile-summary__value profile-summary__value--accent">
+                            {(new Date().getFullYear()) - 2009}+ years
+                          </span>
+                          <span className="profile-summary__meta">Software delivery across backend, cloud, and web, with infrastructure ownership when needed</span>
+                        </div>
+                      </div>
                       <p>
-                        I have {(new Date().getFullYear()) - 2009}+ years of IT experience. I am a Scala and Java
-                        microservice developer, with hands-on Angular and React
-                        delivery experience. My current day-to-day focus is
-                        mostly Scala services on AWS for ITV, alongside the
-                        build, runtime, and platform tooling needed to keep
-                        media workflows running reliably at scale. I enjoy
-                        building products, backend services, and automation
-                        that remove repetitive work and improve operational
-                        visibility.
+                        I have {(new Date().getFullYear()) - 2009}+ years of software engineering experience across backend systems,
+                        cloud platforms, and user-facing delivery. My core background is in Scala and Java
+                        microservices, supported by hands-on Angular and React work where the product requires it.
+                        Today, most of my work centers on Scala services running on AWS for ITV, along with the
+                        build, runtime, and platform tooling needed to keep media workflows reliable at scale.
                       </p>
                       <p>
-                        I have started reflecting my ideas through
-                        websites/webpages, eventhough I have developed many
-                        websites in my career this is new for me to express my
-                        own thought through this media, if you have any
-                        suggestion you can write me back.
+                        I enjoy building products and automation that reduce repetitive work,
+                        improve operational visibility, and help teams move faster with less friction.
+                        This site is a small public space where I share selected experience, writing,
+                        and the kinds of engineering problems I like to solve.
                       </p>
                       <p>
-                        I also actively work with AI-assisted workflow
-                        automation in the media domain. My recent proof of
-                        concept uses n8n to orchestrate LLM-driven flows with
-                        Google Gemini, GitHub Copilot, and OpenAI, alongside a
-                        graph database to support natural language search,
-                        helping turn loosely structured media knowledge into
-                        something teams can query more intuitively.
+                        I also spend time exploring AI-assisted workflow automation in the media domain.
+                        Recent proof-of-concept work has included LLM-orchestrated flows, natural-language search,
+                        and knowledge tooling aimed at making loosely structured operational information easier to use.
                       </p>
                     </div>
                   </div>
@@ -240,15 +179,6 @@ export default class About extends Component {
             <div className="row">
               <div className="col-md-12 animate-box" data-animate-effect="fadeInUp">
                 <div className="skills-board" aria-label="Core tools and technologies">
-                  <div className="skills-board__intro">
-                    <span className="skills-board__eyebrow">Current focus</span>
-                    <p className="skills-board__summary">
-                      Scala backend engineering, AWS media-platform delivery, and workflow automation define most of my current work.
-                    </p>
-                    <p className="skills-board__spotlight">
-                      At ITV, that shows up in self-service onboarding, asset ingest and restore workflows, observability improvements, and practical AI-assisted workflow design.
-                    </p>
-                  </div>
                   {skillGroups.map((group) => (
                     <section className="skills-row" key={group.title}>
                       <div className="skills-row__title-wrap">

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { trackEvent } from "../analytics";
 import { resumeUrl } from "../data/profile";
 
 export default class Introduction extends Component {
@@ -22,11 +23,12 @@ export default class Introduction extends Component {
                           <h1>
                             Hi, I'm Rasmi.
                             <br />
-                            I build resilient backend systems.
+                            Scala engineer building reliable backend systems.
                           </h1>
                           <h2>
-                            Scala engineer delivering AWS-backed media workflows,
-                            automation, and production services at ITV.
+                            I build AWS-backed services, delivery workflows, and automation
+                            for media platforms, with hands-on work across CI/CD, Terraform,
+                            LLM tooling, and production operations at ITV.
                           </h2>
                           <p className="hero-actions">
                             <a
@@ -34,6 +36,11 @@ export default class Introduction extends Component {
                               href={resumeUrl}
                               target="_blank"
                               rel="noopener noreferrer"
+                              onClick={() =>
+                                trackEvent("resume_click", {
+                                  location: "hero",
+                                })
+                              }
                             >
                               View CV
                               <i className="icon-download4" />
@@ -42,6 +49,12 @@ export default class Introduction extends Component {
                               className="btn btn-primary btn-learn"
                               href="mailto:rasmivancse@gmail.com"
                               aria-label="Email Rasmivan"
+                              onClick={() =>
+                                trackEvent("contact_click", {
+                                  location: "hero",
+                                  method: "email",
+                                })
+                              }
                             >
                               Email Me <i className="icon-mail" />
                             </a>
@@ -50,6 +63,12 @@ export default class Introduction extends Component {
                               href="https://github.com/IRasmivan"
                               target="_blank"
                               rel="noopener noreferrer"
+                              onClick={() =>
+                                trackEvent("outbound_click", {
+                                  location: "hero",
+                                  destination: "github",
+                                })
+                              }
                             >
                               View Projects <i className="icon-github" />
                             </a>

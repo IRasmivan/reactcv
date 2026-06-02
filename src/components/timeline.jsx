@@ -28,10 +28,12 @@ export default class Timeline extends Component {
                       </div>
                       <div className="timeline-label">
                         <h2>
-                          Working at ITV <span>2023 June - present</span>
+                          ITV <span>June 2023 - Present</span>
                         </h2>
                         <p>
-                          Scala Engineer where I build webservice to consume and process Millions of data. I build application using scala, React and deploy them as docker container using nomad as container orchestration and GitHub Action for Continuous Integration.                  
+                          Scala Engineer building services that process high-volume media workflow data.
+                          My work spans Scala backend development, selected React-based interfaces,
+                          containerized deployment, and delivery through Nomad and GitHub Actions.
                         </p>
                       </div>
                     </div>
@@ -46,10 +48,11 @@ export default class Timeline extends Component {
                       </div>
                       <div className="timeline-label">
                         <h2>
-                          Work at Intent HQ <span>2021 Sept - 2023 June</span>
+                          Intent HQ <span>Sept 2021 - June 2023</span>
                         </h2>
                         <p>
-                          Scala Engineer where I build webservice to consume and process Millions of data. I build application using scala, React and deploy them as docker container using nomad as container orchestration and GitHub Action for Continuous Integration.                  
+                          Worked as a Scala Engineer on data-intensive services and supporting delivery workflows,
+                          contributing across backend development, cloud deployment, and operational tooling.
                         </p>
                       </div>
                     </div>
@@ -64,19 +67,12 @@ export default class Timeline extends Component {
                       </div>
                       <div className="timeline-label">
                         <h2>
-                          Work at TCS <span>2008 - 2021 Aug</span>
+                          Tata Consultancy Services <span>Dec 2008 - Aug 2021</span>
                         </h2>
                         <p>
-                          I have started my career with TCS on Dec, 2008. My key
-                          expertise area is creating sustainable and flexible
-                          application for Web, Desktop & Mobile hosting in
-                          cloud. I've worked with programming languages like
-                          Java, C#, Python; scripting languages like
-                          Javascripts, typescript & VBScript; I work with
-                          container technology like Docker and
-                          container-orchrastation technologies like K8s and use
-                          CI/CD pipelines to do rapid development; I work with
-                          cloud platform like Azure and AWS.
+                          I started my career at TCS and built a broad engineering foundation across web,
+                          desktop, and cloud-hosted applications. Over that period I worked with Java, C#,
+                          Python, JavaScript, TypeScript, Docker, Kubernetes, CI/CD pipelines, and both Azure and AWS.
                         </p>
                       </div>
                     </div>
@@ -91,15 +87,12 @@ export default class Timeline extends Component {
                       </div>
                       <div className="timeline-label">
                         <h2>
-                          Undergraduation at Pondicherry University{" "}
-                          <span>2004-2008</span>
+                          Pondicherry University <span>2004 - 2008</span>
                         </h2>
                         <p>
-                          I completed my under-graduation degree of B.Tech in
-                          C.S.E.(Computer Science and Engineering). My final
-                          year project was a web-service develoved in C# using
-                          .Net framework demonstrate SOA (Service Oriented
-                          Architecture).
+                          Completed a B.Tech in Computer Science and Engineering.
+                          My final-year project was a C# web service built on .NET to demonstrate
+                          service-oriented architecture concepts.
                         </p>
                       </div>
                     </div>
@@ -114,15 +107,12 @@ export default class Timeline extends Component {
                       </div>
                       <div className="timeline-label">
                         <h2>
-                          Higher Education{" "}
-                          <span>2002-2004</span>
+                          Higher Secondary Education <span>2002 - 2004</span>
                         </h2>
                         <p>
-                          I have completed my higher secondary education with
-                          major subjects as Physics,Chemistry, Maths & Computer
-                          Science. During my school time, I have developed
-                          interest in computer programming by introduction to C,
-                          C++, Javascripts & HTML to build softwares.
+                          Studied Physics, Chemistry, Mathematics, and Computer Science.
+                          This was also where my interest in programming began through early work with
+                          C, C++, JavaScript, and HTML.
                         </p>
                       </div>
                     </div>

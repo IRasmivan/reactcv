@@ -1,4 +1,9 @@
 import React, { Component } from "react";
+import {
+  clearStoredAnalyticsConsent,
+  isAnalyticsConfigured,
+  trackEvent,
+} from "../analytics";
 import { resumeUrl } from "../data/profile";
 
 export default class Sidebar extends Component {
@@ -28,10 +33,19 @@ export default class Sidebar extends Component {
               <h1 id="colorlib-logo">
                 <a href="/">Rasmivan Ilangovan</a>
               </h1>
+              <p className="sidebar-role">
+                Scala engineer focused on backend systems, AWS delivery, CI/CD, and workflow automation.
+              </p>
               <a
                 className="contact-item contact-item--email"
                 href="mailto:rasmivancse@gmail.com"
                 aria-label="Email rasmivancse@gmail.com"
+                onClick={() =>
+                  trackEvent("contact_click", {
+                    location: "sidebar",
+                    method: "email",
+                  })
+                }
               >
                 <span className="contact-item__icon" aria-hidden="true">
                   <i className="icon-mail" />
@@ -42,6 +56,12 @@ export default class Sidebar extends Component {
                 className="contact-item contact-item--phone"
                 href="tel:+447459669676"
                 aria-label="Call +44-745-966-9676"
+                onClick={() =>
+                  trackEvent("contact_click", {
+                    location: "sidebar",
+                    method: "phone",
+                  })
+                }
               >
                 <span className="contact-item__icon" aria-hidden="true">
                   <i className="icon-phone" />
@@ -54,6 +74,12 @@ export default class Sidebar extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Message on WhatsApp +91-848-953-2988"
+                onClick={() =>
+                  trackEvent("contact_click", {
+                    location: "sidebar",
+                    method: "whatsapp",
+                  })
+                }
               >
                 <span className="contact-item__icon" aria-hidden="true">
                   <i className="icon-whatsapp" />
@@ -66,6 +92,11 @@ export default class Sidebar extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="View resume"
+                onClick={() =>
+                  trackEvent("resume_click", {
+                    location: "sidebar",
+                  })
+                }
               >
                 <span className="sidebar-resume-link__icon" aria-hidden="true">
                   <i className="icon-download4" />
@@ -86,11 +117,6 @@ export default class Sidebar extends Component {
                       Profile
                     </a>
                   </li>
-                  {/* <li>
-                    <a href="#projects" data-nav-section="projects">
-                      Projects
-                    </a>
-                  </li>*/}
                   <li>
                     <a href="#timeline" data-nav-section="timeline">
                       Timeline
@@ -105,6 +131,7 @@ export default class Sidebar extends Component {
               </div>
             </nav>
             <nav className="social-links" aria-label="Social links">
+              <p className="sidebar-section-label">Find me on</p>
               <ul>
                 <li>
                   <a
@@ -112,6 +139,12 @@ export default class Sidebar extends Component {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
+                    onClick={() =>
+                      trackEvent("outbound_click", {
+                        location: "sidebar",
+                        destination: "linkedin",
+                      })
+                    }
                   >
                     <i className="icon-linkedin2" aria-hidden="true" />
                   </a>
@@ -122,6 +155,12 @@ export default class Sidebar extends Component {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="GitHub"
+                    onClick={() =>
+                      trackEvent("outbound_click", {
+                        location: "sidebar",
+                        destination: "github",
+                      })
+                    }
                   >
                     <i className="icon-github" aria-hidden="true" />
                   </a>
@@ -132,6 +171,12 @@ export default class Sidebar extends Component {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Blog"
+                    onClick={() =>
+                      trackEvent("outbound_click", {
+                        location: "sidebar",
+                        destination: "blog",
+                      })
+                    }
                   >
                     <i className="icon-blogger2" aria-hidden="true" />
                   </a>
@@ -141,23 +186,25 @@ export default class Sidebar extends Component {
             <div className="colorlib-footer">
               <p>
                 <small>
-                  Built in React
-                  <br />
-                  Inspired by{" "}
-                  <a
-                    href="https://colorlib.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Colorlib
-                  </a>
+                  Built with React and maintained as a lightweight personal site.
                 </small>
               </p>
               <p>
                 <small>
-                  Built and deployed via GitHub Actions
+                  Deployed through GitHub Actions and GitHub Pages.
                 </small>
               </p>
+              {isAnalyticsConfigured() ? (
+                <p>
+                  <button
+                    type="button"
+                    className="footer-link-button"
+                    onClick={clearStoredAnalyticsConsent}
+                  >
+                    Change cookie preferences
+                  </button>
+                </p>
+              ) : null}
             </div>
           </aside>
         </div>

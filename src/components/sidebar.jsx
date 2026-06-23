@@ -167,6 +167,22 @@ export default class Sidebar extends Component {
                 </li>
                 <li>
                   <a
+                    href="https://www.youtube.com/@coderlearning3716"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
+                    onClick={() =>
+                      trackEvent("outbound_click", {
+                        location: "sidebar",
+                        destination: "youtube",
+                      })
+                    }
+                  >
+                    <i className="icon-youtube" aria-hidden="true" />
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="https://blog.rasmivan.com/"
                     target="_blank"
                     rel="noopener noreferrer"
